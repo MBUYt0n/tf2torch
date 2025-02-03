@@ -1,0 +1,3785 @@
+    #[1]Index [2]Search [3]torch.is_tensor [4]torch::deploy has been moved
+   to pytorch/multipy
+
+     * Learn
+       [5]Get Started
+       Run PyTorch locally or get started quickly with one of the
+       supported cloud platforms
+       [6]Tutorials
+       Whats new in PyTorch tutorials
+       [7]Learn the Basics
+       Familiarize yourself with PyTorch concepts and modules
+       [8]PyTorch Recipes
+       Bite-size, ready-to-deploy PyTorch code examples
+       [9]Intro to PyTorch - YouTube Series
+       Master PyTorch basics with our engaging YouTube tutorial series
+     * Ecosystem
+       [10]Tools
+       Learn about the tools and frameworks in the PyTorch Ecosystem
+       [11]Community
+       Join the PyTorch developer community to contribute, learn, and get
+       your questions answered
+       [12]Forums
+       A place to discuss PyTorch code, issues, install, research
+       [13]Developer Resources
+       Find resources and get questions answered
+       [14]Contributor Awards - 2023
+       Award winners announced at this year's PyTorch Conference
+     * Edge
+       [15]About PyTorch Edge
+       Build innovative and privacy-aware AI experiences for edge devices
+       [16]ExecuTorch
+       End-to-end solution for enabling on-device inference capabilities
+       across mobile and edge devices
+     * Docs
+       [17]PyTorch
+       Explore the documentation for comprehensive guidance on how to use
+       PyTorch
+       [18]PyTorch Domains
+       Read the PyTorch Domains documentation to learn more about
+       domain-specific libraries
+     * Blogs & News
+       [19]PyTorch Blog
+       Catch up on the latest technical news and happenings
+       [20]Community Blog
+       Stories from the PyTorch ecosystem
+       [21]Videos
+       Learn about the latest PyTorch tutorials, new, and more
+       [22]Community Stories
+       Learn how our community solves real, everyday machine learning
+       problems with PyTorch
+       [23]Events
+       Find events, webinars, and podcasts
+     * About
+       [24]PyTorch Foundation
+       Learn more about the PyTorch Foundation
+       [25]Governing Board
+     * [26]Become a Member
+     *
+
+   Table of Contents
+
+   [27]2.6 ▼
+   ____________________
+   (*) Google Search ( ) Classic Search
+
+     [28]Share Your Feedback about our new search
+
+   Community
+     * [29]PyTorch Governance | Build + CI
+     * [30]PyTorch Contribution Guide
+     * [31]PyTorch Design Philosophy
+     * [32]PyTorch Governance | Mechanics
+     * [33]PyTorch Governance | Maintainers
+
+   Developer Notes
+     * [34]Automatic Mixed Precision examples
+     * [35]Autograd mechanics
+     * [36]Broadcasting semantics
+     * [37]CPU threading and TorchScript inference
+     * [38]CUDA semantics
+     * [39]PyTorch Custom Operators Landing Page
+     * [40]Distributed Data Parallel
+     * [41]Extending PyTorch
+     * [42]Extending torch.func with autograd.Function
+     * [43]Frequently Asked Questions
+     * [44]FSDP Notes
+     * [45]Getting Started on Intel GPU
+     * [46]Gradcheck mechanics
+     * [47]HIP (ROCm) semantics
+     * [48]Features for large-scale deployments
+     * [49]Modules
+     * [50]MPS backend
+     * [51]Multiprocessing best practices
+     * [52]Numerical accuracy
+     * [53]Reproducibility
+     * [54]Serialization semantics
+     * [55]Windows FAQ
+
+   Language Bindings
+     * [56]C++
+     * [57]Javadoc
+     * [58]torch::deploy
+
+   Python API
+     * [59]torch
+     * [60]torch.nn
+     * [61]torch.nn.functional
+     * [62]torch.Tensor
+     * [63]Tensor Attributes
+     * [64]Tensor Views
+     * [65]torch.amp
+     * [66]torch.autograd
+     * [67]torch.library
+     * [68]torch.accelerator
+     * [69]torch.cpu
+     * [70]torch.cuda
+     * [71]Understanding CUDA Memory Usage
+     * [72]Generating a Snapshot
+     * [73]Using the visualizer
+     * [74]Snapshot API Reference
+     * [75]torch.mps
+     * [76]torch.xpu
+     * [77]torch.mtia
+     * [78]torch.mtia.memory
+     * [79]Meta device
+     * [80]torch.backends
+     * [81]torch.export
+     * [82]torch.distributed
+     * [83]torch.distributed.tensor
+     * [84]torch.distributed.algorithms.join
+     * [85]torch.distributed.elastic
+     * [86]torch.distributed.fsdp
+     * [87]torch.distributed.fsdp.fully_shard
+     * [88]torch.distributed.tensor.parallel
+     * [89]torch.distributed.optim
+     * [90]torch.distributed.pipelining
+     * [91]torch.distributed.checkpoint
+     * [92]torch.distributions
+     * [93]torch.compiler
+     * [94]torch.fft
+     * [95]torch.func
+     * [96]torch.futures
+     * [97]torch.fx
+     * [98]torch.fx.experimental
+     * [99]torch.hub
+     * [100]torch.jit
+     * [101]torch.linalg
+     * [102]torch.monitor
+     * [103]torch.signal
+     * [104]torch.special
+     * [105]torch.overrides
+     * [106]torch.package
+     * [107]torch.profiler
+     * [108]torch.nn.init
+     * [109]torch.nn.attention
+     * [110]torch.onnx
+     * [111]torch.optim
+     * [112]Complex Numbers
+     * [113]DDP Communication Hooks
+     * [114]Quantization
+     * [115]Distributed RPC Framework
+     * [116]torch.random
+     * [117]torch.masked
+     * [118]torch.nested
+     * [119]torch.Size
+     * [120]torch.sparse
+     * [121]torch.Storage
+     * [122]torch.testing
+     * [123]torch.utils
+     * [124]torch.utils.benchmark
+     * [125]torch.utils.bottleneck
+     * [126]torch.utils.checkpoint
+     * [127]torch.utils.cpp_extension
+     * [128]torch.utils.data
+     * [129]torch.utils.deterministic
+     * [130]torch.utils.jit
+     * [131]torch.utils.dlpack
+     * [132]torch.utils.mobile_optimizer
+     * [133]torch.utils.model_zoo
+     * [134]torch.utils.tensorboard
+     * [135]torch.utils.module_tracker
+     * [136]Type Info
+     * [137]Named Tensors
+     * [138]Named Tensors operator coverage
+     * [139]torch.__config__
+     * [140]torch.__future__
+     * [141]torch._logging
+     * [142]Torch Environment Variables
+
+   Libraries
+     * [143]torchaudio
+     * [144]TorchData
+     * [145]TorchRec
+     * [146]TorchServe
+     * [147]torchtext
+     * [148]torchvision
+     * [149]PyTorch on XLA Devices
+
+     * [150]Docs >
+     * torch
+     * [151][view-page-source-icon.svg]
+
+   Shortcuts
+
+   IFRAME: [152]https://www.googletagmanager.com/ns.html?id=GTM-T8XT4PS
+
+torch[153]¶
+
+   The torch package contains data structures for multi-dimensional
+   tensors and defines mathematical operations over these tensors.
+   Additionally, it provides many utilities for efficient serialization of
+   Tensors and arbitrary types, and other useful utilities.
+
+   It has a CUDA counterpart, that enables you to run your tensor
+   computations on an NVIDIA GPU with compute capability >= 3.0.
+
+Tensors[154]¶
+
+   [155]is_tensor
+
+   Returns True if obj is a PyTorch tensor.
+
+   [156]is_storage
+
+   Returns True if obj is a PyTorch storage object.
+
+   [157]is_complex
+
+   Returns True if the data type of input is a complex data type i.e., one
+   of torch.complex64, and torch.complex128.
+
+   [158]is_conj
+
+   Returns True if the input is a conjugated tensor, i.e. its conjugate
+   bit is set to True.
+
+   [159]is_floating_point
+
+   Returns True if the data type of input is a floating point data type
+   i.e., one of torch.float64, torch.float32, torch.float16, and
+   torch.bfloat16.
+
+   [160]is_nonzero
+
+   Returns True if the input is a single element tensor which is not equal
+   to zero after type conversions.
+
+   [161]set_default_dtype
+
+   Sets the default floating point dtype to d.
+
+   [162]get_default_dtype
+
+   Get the current default floating point [163]torch.dtype.
+
+   [164]set_default_device
+
+   Sets the default torch.Tensor to be allocated on device.
+
+   [165]get_default_device
+
+   Gets the default torch.Tensor to be allocated on device
+
+   [166]set_default_tensor_type
+
+   [167]numel
+
+   Returns the total number of elements in the input tensor.
+
+   [168]set_printoptions
+
+   Set options for printing.
+
+   [169]set_flush_denormal
+
+   Disables denormal floating numbers on CPU.
+
+Creation Ops[170]¶
+
+   Note
+
+   Random sampling creation ops are listed under [171]Random sampling and
+   include: [172]torch.rand() [173]torch.rand_like() [174]torch.randn()
+   [175]torch.randn_like() [176]torch.randint() [177]torch.randint_like()
+   [178]torch.randperm() You may also use [179]torch.empty() with the
+   [180]In-place random sampling methods to create [181]torch.Tensor s
+   with values sampled from a broader range of distributions.
+
+   [182]tensor
+
+   Constructs a tensor with no autograd history (also known as a "leaf
+   tensor", see [183]Autograd mechanics) by copying data.
+
+   [184]sparse_coo_tensor
+
+   Constructs a [185]sparse tensor in COO(rdinate) format with specified
+   values at the given indices.
+
+   [186]sparse_csr_tensor
+
+   Constructs a [187]sparse tensor in CSR (Compressed Sparse Row) with
+   specified values at the given crow_indices and col_indices.
+
+   [188]sparse_csc_tensor
+
+   Constructs a [189]sparse tensor in CSC (Compressed Sparse Column) with
+   specified values at the given ccol_indices and row_indices.
+
+   [190]sparse_bsr_tensor
+
+   Constructs a [191]sparse tensor in BSR (Block Compressed Sparse Row))
+   with specified 2-dimensional blocks at the given crow_indices and
+   col_indices.
+
+   [192]sparse_bsc_tensor
+
+   Constructs a [193]sparse tensor in BSC (Block Compressed Sparse
+   Column)) with specified 2-dimensional blocks at the given ccol_indices
+   and row_indices.
+
+   [194]asarray
+
+   Converts obj to a tensor.
+
+   [195]as_tensor
+
+   Converts data into a tensor, sharing data and preserving autograd
+   history if possible.
+
+   [196]as_strided
+
+   Create a view of an existing torch.Tensor input with specified size,
+   stride and storage_offset.
+
+   [197]from_file
+
+   Creates a CPU tensor with a storage backed by a memory-mapped file.
+
+   [198]from_numpy
+
+   Creates a [199]Tensor from a [200]numpy.ndarray.
+
+   [201]from_dlpack
+
+   Converts a tensor from an external library into a torch.Tensor.
+
+   [202]frombuffer
+
+   Creates a 1-dimensional [203]Tensor from an object that implements the
+   Python buffer protocol.
+
+   [204]zeros
+
+   Returns a tensor filled with the scalar value 0, with the shape defined
+   by the variable argument size.
+
+   [205]zeros_like
+
+   Returns a tensor filled with the scalar value 0, with the same size as
+   input.
+
+   [206]ones
+
+   Returns a tensor filled with the scalar value 1, with the shape defined
+   by the variable argument size.
+
+   [207]ones_like
+
+   Returns a tensor filled with the scalar value 1, with the same size as
+   input.
+
+   [208]arange
+
+   Returns a 1-D tensor of size
+   [MATH: <semantics><mrow><mo
+   fence="true">⌈</mo><mfrac><mrow><mtext>end</mtext><mo>−</mo><mtext>star
+   t</mtext></mrow><mtext>step</mtext></mfrac><mo
+   fence="true">⌉</mo></mrow><annotation
+   encoding="application/x-tex">\left\lceil \frac{\text{end} -
+   \text{start}}{\text{step}} \right\rceil</annotation></semantics> :MATH]
+   ⌈stepend−start​⌉ with values from the interval [start, end) taken with
+   common difference step beginning from start.
+
+   [209]range
+
+   Returns a 1-D tensor of size
+   [MATH: <semantics><mrow><mrow><mo
+   fence="true">⌊</mo><mfrac><mrow><mtext>end</mtext><mo>−</mo><mtext>star
+   t</mtext></mrow><mtext>step</mtext></mfrac><mo
+   fence="true">⌋</mo></mrow><mo>+</mo><mn>1</mn></mrow><annotation
+   encoding="application/x-tex">\left\lfloor \frac{\text{end} -
+   \text{start}}{\text{step}} \right\rfloor + 1</annotation></semantics>
+   :MATH]
+   ⌊stepend−start​⌋+1 with values from start to end with step step.
+
+   [210]linspace
+
+   Creates a one-dimensional tensor of size steps whose values are evenly
+   spaced from start to end, inclusive.
+
+   [211]logspace
+
+   Creates a one-dimensional tensor of size steps whose values are evenly
+   spaced from
+   [MATH:
+   <semantics><mrow><msup><mtext>base</mtext><mtext>start</mtext></msup></
+   mrow><annotation
+   encoding="application/x-tex">{{\text{{base}}}}^{{\text{{start}}}}</anno
+   tation></semantics> :MATH]
+   basestart to
+   [MATH:
+   <semantics><mrow><msup><mtext>base</mtext><mtext>end</mtext></msup></mr
+   ow><annotation
+   encoding="application/x-tex">{{\text{{base}}}}^{{\text{{end}}}}</annota
+   tion></semantics> :MATH]
+   baseend, inclusive, on a logarithmic scale with base base.
+
+   [212]eye
+
+   Returns a 2-D tensor with ones on the diagonal and zeros elsewhere.
+
+   [213]empty
+
+   Returns a tensor filled with uninitialized data.
+
+   [214]empty_like
+
+   Returns an uninitialized tensor with the same size as input.
+
+   [215]empty_strided
+
+   Creates a tensor with the specified size and stride and filled with
+   undefined data.
+
+   [216]full
+
+   Creates a tensor of size size filled with fill_value.
+
+   [217]full_like
+
+   Returns a tensor with the same size as input filled with fill_value.
+
+   [218]quantize_per_tensor
+
+   Converts a float tensor to a quantized tensor with given scale and zero
+   point.
+
+   [219]quantize_per_channel
+
+   Converts a float tensor to a per-channel quantized tensor with given
+   scales and zero points.
+
+   [220]dequantize
+
+   Returns an fp32 Tensor by dequantizing a quantized Tensor
+
+   [221]complex
+
+   Constructs a complex tensor with its real part equal to [222]real and
+   its imaginary part equal to [223]imag.
+
+   [224]polar
+
+   Constructs a complex tensor whose elements are Cartesian coordinates
+   corresponding to the polar coordinates with absolute value [225]abs and
+   angle [226]angle.
+
+   [227]heaviside
+
+   Computes the Heaviside step function for each element in input.
+
+Indexing, Slicing, Joining, Mutating Ops[228]¶
+
+   [229]adjoint
+
+   Returns a view of the tensor conjugated and with the last two
+   dimensions transposed.
+
+   [230]argwhere
+
+   Returns a tensor containing the indices of all non-zero elements of
+   input.
+
+   [231]cat
+
+   Concatenates the given sequence of tensors in tensors in the given
+   dimension.
+
+   [232]concat
+
+   Alias of [233]torch.cat().
+
+   [234]concatenate
+
+   Alias of [235]torch.cat().
+
+   [236]conj
+
+   Returns a view of input with a flipped conjugate bit.
+
+   [237]chunk
+
+   Attempts to split a tensor into the specified number of chunks.
+
+   [238]dsplit
+
+   Splits input, a tensor with three or more dimensions, into multiple
+   tensors depthwise according to indices_or_sections.
+
+   [239]column_stack
+
+   Creates a new tensor by horizontally stacking the tensors in tensors.
+
+   [240]dstack
+
+   Stack tensors in sequence depthwise (along third axis).
+
+   [241]gather
+
+   Gathers values along an axis specified by dim.
+
+   [242]hsplit
+
+   Splits input, a tensor with one or more dimensions, into multiple
+   tensors horizontally according to indices_or_sections.
+
+   [243]hstack
+
+   Stack tensors in sequence horizontally (column wise).
+
+   [244]index_add
+
+   See [245]index_add_() for function description.
+
+   [246]index_copy
+
+   See [247]index_add_() for function description.
+
+   [248]index_reduce
+
+   See [249]index_reduce_() for function description.
+
+   [250]index_select
+
+   Returns a new tensor which indexes the input tensor along dimension dim
+   using the entries in index which is a LongTensor.
+
+   [251]masked_select
+
+   Returns a new 1-D tensor which indexes the input tensor according to
+   the boolean mask mask which is a BoolTensor.
+
+   [252]movedim
+
+   Moves the dimension(s) of input at the position(s) in source to the
+   position(s) in destination.
+
+   [253]moveaxis
+
+   Alias for [254]torch.movedim().
+
+   [255]narrow
+
+   Returns a new tensor that is a narrowed version of input tensor.
+
+   [256]narrow_copy
+
+   Same as [257]Tensor.narrow() except this returns a copy rather than
+   shared storage.
+
+   [258]nonzero
+
+   [259]permute
+
+   Returns a view of the original tensor input with its dimensions
+   permuted.
+
+   [260]reshape
+
+   Returns a tensor with the same data and number of elements as input,
+   but with the specified shape.
+
+   [261]row_stack
+
+   Alias of [262]torch.vstack().
+
+   [263]select
+
+   Slices the input tensor along the selected dimension at the given
+   index.
+
+   [264]scatter
+
+   Out-of-place version of [265]torch.Tensor.scatter_()
+
+   [266]diagonal_scatter
+
+   Embeds the values of the src tensor into input along the diagonal
+   elements of input, with respect to dim1 and dim2.
+
+   [267]select_scatter
+
+   Embeds the values of the src tensor into input at the given index.
+
+   [268]slice_scatter
+
+   Embeds the values of the src tensor into input at the given dimension.
+
+   [269]scatter_add
+
+   Out-of-place version of [270]torch.Tensor.scatter_add_()
+
+   [271]scatter_reduce
+
+   Out-of-place version of [272]torch.Tensor.scatter_reduce_()
+
+   [273]split
+
+   Splits the tensor into chunks.
+
+   [274]squeeze
+
+   Returns a tensor with all specified dimensions of input of size 1
+   removed.
+
+   [275]stack
+
+   Concatenates a sequence of tensors along a new dimension.
+
+   [276]swapaxes
+
+   Alias for [277]torch.transpose().
+
+   [278]swapdims
+
+   Alias for [279]torch.transpose().
+
+   [280]t
+
+   Expects input to be <= 2-D tensor and transposes dimensions 0 and 1.
+
+   [281]take
+
+   Returns a new tensor with the elements of input at the given indices.
+
+   [282]take_along_dim
+
+   Selects values from input at the 1-dimensional indices from indices
+   along the given dim.
+
+   [283]tensor_split
+
+   Splits a tensor into multiple sub-tensors, all of which are views of
+   input, along dimension dim according to the indices or number of
+   sections specified by indices_or_sections.
+
+   [284]tile
+
+   Constructs a tensor by repeating the elements of input.
+
+   [285]transpose
+
+   Returns a tensor that is a transposed version of input.
+
+   [286]unbind
+
+   Removes a tensor dimension.
+
+   [287]unravel_index
+
+   Converts a tensor of flat indices into a tuple of coordinate tensors
+   that index into an arbitrary tensor of the specified shape.
+
+   [288]unsqueeze
+
+   Returns a new tensor with a dimension of size one inserted at the
+   specified position.
+
+   [289]vsplit
+
+   Splits input, a tensor with two or more dimensions, into multiple
+   tensors vertically according to indices_or_sections.
+
+   [290]vstack
+
+   Stack tensors in sequence vertically (row wise).
+
+   [291]where
+
+   Return a tensor of elements selected from either input or other,
+   depending on condition.
+
+Accelerators[292]¶
+
+   Within the PyTorch repo, we define an “Accelerator” as a
+   [293]torch.device that is being used alongside a CPU to speed up
+   computation. These device use an asynchronous execution scheme, using
+   [294]torch.Stream and [295]torch.Event as their main way to perform
+   synchronization. We also assume that only one such accelerator can be
+   available at once on a given host. This allows us to use the current
+   accelerator as the default device for relevant concepts such as pinned
+   memory, Stream device_type, FSDP, etc.
+
+   As of today, accelerator devices are (in no particular order)
+   [296]“CUDA”, [297]“MTIA”, [298]“XPU”, and PrivateUse1 (many device not
+   in the PyTorch repo itself).
+
+   [299]Stream
+
+   An in-order queue of executing the respective tasks asynchronously in
+   first in first out (FIFO) order.
+
+   [300]Event
+
+   Query and record Stream status to identify or control dependencies
+   across Stream and measure timing.
+
+Generators[301]¶
+
+   [302]Generator
+
+   Creates and returns a generator object that manages the state of the
+   algorithm which produces pseudo random numbers.
+
+Random sampling[303]¶
+
+   [304]seed
+
+   Sets the seed for generating random numbers to a non-deterministic
+   random number on all devices.
+
+   [305]manual_seed
+
+   Sets the seed for generating random numbers on all devices.
+
+   [306]initial_seed
+
+   Returns the initial seed for generating random numbers as a Python
+   long.
+
+   [307]get_rng_state
+
+   Returns the random number generator state as a torch.ByteTensor.
+
+   [308]set_rng_state
+
+   Sets the random number generator state.
+
+   torch.default_generator Returns the default CPU torch.Generator[309]¶
+
+   [310]bernoulli
+
+   Draws binary random numbers (0 or 1) from a Bernoulli distribution.
+
+   [311]multinomial
+
+   Returns a tensor where each row contains num_samples indices sampled
+   from the multinomial (a stricter definition would be multivariate,
+   refer to [312]torch.distributions.multinomial.Multinomial for more
+   details) probability distribution located in the corresponding row of
+   tensor input.
+
+   [313]normal
+
+   Returns a tensor of random numbers drawn from separate normal
+   distributions whose mean and standard deviation are given.
+
+   [314]poisson
+
+   Returns a tensor of the same size as input with each element sampled
+   from a Poisson distribution with rate parameter given by the
+   corresponding element in input i.e.,
+
+   [315]rand
+
+   Returns a tensor filled with random numbers from a uniform distribution
+   on the interval
+   [MATH: <semantics><mrow><mo stretchy="false">[</mo><mn>0</mn><mo
+   separator="true">,</mo><mn>1</mn><mo
+   stretchy="false">)</mo></mrow><annotation
+   encoding="application/x-tex">[0, 1)</annotation></semantics> :MATH]
+   [0,1)
+
+   [316]rand_like
+
+   Returns a tensor with the same size as input that is filled with random
+   numbers from a uniform distribution on the interval
+   [MATH: <semantics><mrow><mo stretchy="false">[</mo><mn>0</mn><mo
+   separator="true">,</mo><mn>1</mn><mo
+   stretchy="false">)</mo></mrow><annotation
+   encoding="application/x-tex">[0, 1)</annotation></semantics> :MATH]
+   [0,1).
+
+   [317]randint
+
+   Returns a tensor filled with random integers generated uniformly
+   between low (inclusive) and high (exclusive).
+
+   [318]randint_like
+
+   Returns a tensor with the same shape as Tensor input filled with random
+   integers generated uniformly between low (inclusive) and high
+   (exclusive).
+
+   [319]randn
+
+   Returns a tensor filled with random numbers from a normal distribution
+   with mean 0 and variance 1 (also called the standard normal
+   distribution).
+
+   [320]randn_like
+
+   Returns a tensor with the same size as input that is filled with random
+   numbers from a normal distribution with mean 0 and variance 1.
+
+   [321]randperm
+
+   Returns a random permutation of integers from 0 to n - 1.
+
+In-place random sampling[322]¶
+
+   There are a few more in-place random sampling functions defined on
+   Tensors as well. Click through to refer to their documentation:
+     * [323]torch.Tensor.bernoulli_() - in-place version of
+       [324]torch.bernoulli()
+     * [325]torch.Tensor.cauchy_() - numbers drawn from the Cauchy
+       distribution
+     * [326]torch.Tensor.exponential_() - numbers drawn from the
+       exponential distribution
+     * [327]torch.Tensor.geometric_() - elements drawn from the geometric
+       distribution
+     * [328]torch.Tensor.log_normal_() - samples from the log-normal
+       distribution
+     * [329]torch.Tensor.normal_() - in-place version of
+       [330]torch.normal()
+     * [331]torch.Tensor.random_() - numbers sampled from the discrete
+       uniform distribution
+     * [332]torch.Tensor.uniform_() - numbers sampled from the continuous
+       uniform distribution
+
+Quasi-random sampling[333]¶
+
+   [334]quasirandom.SobolEngine
+
+   The [335]torch.quasirandom.SobolEngine is an engine for generating
+   (scrambled) Sobol sequences.
+
+Serialization[336]¶
+
+   [337]save
+
+   Saves an object to a disk file.
+
+   [338]load
+
+   Loads an object saved with [339]torch.save() from a file.
+
+Parallelism[340]¶
+
+   [341]get_num_threads
+
+   Returns the number of threads used for parallelizing CPU operations
+
+   [342]set_num_threads
+
+   Sets the number of threads used for intraop parallelism on CPU.
+
+   [343]get_num_interop_threads
+
+   Returns the number of threads used for inter-op parallelism on CPU
+   (e.g.
+
+   [344]set_num_interop_threads
+
+   Sets the number of threads used for interop parallelism (e.g.
+
+Locally disabling gradient computation[345]¶
+
+   The context managers [346]torch.no_grad(), [347]torch.enable_grad(),
+   and torch.set_grad_enabled() are helpful for locally disabling and
+   enabling gradient computation. See [348]Locally disabling gradient
+   computation for more details on their usage. These context managers are
+   thread local, so they won’t work if you send work to another thread
+   using the threading module, etc.
+
+   Examples:
+>>> x = torch.zeros(1, requires_grad=True)
+>>> with torch.no_grad():
+...     y = x * 2
+>>> y.requires_grad
+False
+
+>>> is_train = False
+>>> with torch.set_grad_enabled(is_train):
+...     y = x * 2
+>>> y.requires_grad
+False
+
+>>> torch.set_grad_enabled(True)  # this can also be used as a function
+>>> y = x * 2
+>>> y.requires_grad
+True
+
+>>> torch.set_grad_enabled(False)
+>>> y = x * 2
+>>> y.requires_grad
+False
+
+   [349]no_grad
+
+   Context-manager that disables gradient calculation.
+
+   [350]enable_grad
+
+   Context-manager that enables gradient calculation.
+
+   [351]autograd.grad_mode.set_grad_enabled
+
+   Context-manager that sets gradient calculation on or off.
+
+   [352]is_grad_enabled
+
+   Returns True if grad mode is currently enabled.
+
+   [353]autograd.grad_mode.inference_mode
+
+   Context-manager that enables or disables inference mode.
+
+   [354]is_inference_mode_enabled
+
+   Returns True if inference mode is currently enabled.
+
+Math operations[355]¶
+
+Constants[356]¶
+
+   inf
+
+   A floating-point positive infinity. Alias for math.inf.
+
+   nan
+
+   A floating-point “not a number” value. This value is not a legal
+   number. Alias for math.nan.
+
+Pointwise Ops[357]¶
+
+   [358]abs
+
+   Computes the absolute value of each element in input.
+
+   [359]absolute
+
+   Alias for [360]torch.abs()
+
+   [361]acos
+
+   Computes the inverse cosine of each element in input.
+
+   [362]arccos
+
+   Alias for [363]torch.acos().
+
+   [364]acosh
+
+   Returns a new tensor with the inverse hyperbolic cosine of the elements
+   of input.
+
+   [365]arccosh
+
+   Alias for [366]torch.acosh().
+
+   [367]add
+
+   Adds other, scaled by alpha, to input.
+
+   [368]addcdiv
+
+   Performs the element-wise division of tensor1 by tensor2, multiplies
+   the result by the scalar value and adds it to input.
+
+   [369]addcmul
+
+   Performs the element-wise multiplication of tensor1 by tensor2,
+   multiplies the result by the scalar value and adds it to input.
+
+   [370]angle
+
+   Computes the element-wise angle (in radians) of the given input tensor.
+
+   [371]asin
+
+   Returns a new tensor with the arcsine of the elements of input.
+
+   [372]arcsin
+
+   Alias for [373]torch.asin().
+
+   [374]asinh
+
+   Returns a new tensor with the inverse hyperbolic sine of the elements
+   of input.
+
+   [375]arcsinh
+
+   Alias for [376]torch.asinh().
+
+   [377]atan
+
+   Returns a new tensor with the arctangent of the elements of input.
+
+   [378]arctan
+
+   Alias for [379]torch.atan().
+
+   [380]atanh
+
+   Returns a new tensor with the inverse hyperbolic tangent of the
+   elements of input.
+
+   [381]arctanh
+
+   Alias for [382]torch.atanh().
+
+   [383]atan2
+
+   Element-wise arctangent of
+   [MATH: <semantics><mrow><msub><mtext>input</mtext><mi>i</mi></msub><mi
+   mathvariant="normal">/</mi><msub><mtext>other</mtext><mi>i</mi></msub><
+   /mrow><annotation encoding="application/x-tex">\text{input}_{i} /
+   \text{other}_{i}</annotation></semantics> :MATH]
+   inputi​/otheri​ with consideration of the quadrant.
+
+   [384]arctan2
+
+   Alias for [385]torch.atan2().
+
+   [386]bitwise_not
+
+   Computes the bitwise NOT of the given input tensor.
+
+   [387]bitwise_and
+
+   Computes the bitwise AND of input and other.
+
+   [388]bitwise_or
+
+   Computes the bitwise OR of input and other.
+
+   [389]bitwise_xor
+
+   Computes the bitwise XOR of input and other.
+
+   [390]bitwise_left_shift
+
+   Computes the left arithmetic shift of input by other bits.
+
+   [391]bitwise_right_shift
+
+   Computes the right arithmetic shift of input by other bits.
+
+   [392]ceil
+
+   Returns a new tensor with the ceil of the elements of input, the
+   smallest integer greater than or equal to each element.
+
+   [393]clamp
+
+   Clamps all elements in input into the range [ [394]min, [395]max ].
+
+   [396]clip
+
+   Alias for [397]torch.clamp().
+
+   [398]conj_physical
+
+   Computes the element-wise conjugate of the given input tensor.
+
+   [399]copysign
+
+   Create a new floating-point tensor with the magnitude of input and the
+   sign of other, elementwise.
+
+   [400]cos
+
+   Returns a new tensor with the cosine of the elements of input.
+
+   [401]cosh
+
+   Returns a new tensor with the hyperbolic cosine of the elements of
+   input.
+
+   [402]deg2rad
+
+   Returns a new tensor with each of the elements of input converted from
+   angles in degrees to radians.
+
+   [403]div
+
+   Divides each element of the input input by the corresponding element of
+   other.
+
+   [404]divide
+
+   Alias for [405]torch.div().
+
+   [406]digamma
+
+   Alias for [407]torch.special.digamma().
+
+   [408]erf
+
+   Alias for [409]torch.special.erf().
+
+   [410]erfc
+
+   Alias for [411]torch.special.erfc().
+
+   [412]erfinv
+
+   Alias for [413]torch.special.erfinv().
+
+   [414]exp
+
+   Returns a new tensor with the exponential of the elements of the input
+   tensor input.
+
+   [415]exp2
+
+   Alias for [416]torch.special.exp2().
+
+   [417]expm1
+
+   Alias for [418]torch.special.expm1().
+
+   [419]fake_quantize_per_channel_affine
+
+   Returns a new tensor with the data in input fake quantized per channel
+   using scale, zero_point, quant_min and quant_max, across the channel
+   specified by axis.
+
+   [420]fake_quantize_per_tensor_affine
+
+   Returns a new tensor with the data in input fake quantized using scale,
+   zero_point, quant_min and quant_max.
+
+   [421]fix
+
+   Alias for [422]torch.trunc()
+
+   [423]float_power
+
+   Raises input to the power of exponent, elementwise, in double
+   precision.
+
+   [424]floor
+
+   Returns a new tensor with the floor of the elements of input, the
+   largest integer less than or equal to each element.
+
+   [425]floor_divide
+
+   [426]fmod
+
+   Applies C++'s [427]std::fmod entrywise.
+
+   [428]frac
+
+   Computes the fractional portion of each element in input.
+
+   [429]frexp
+
+   Decomposes input into mantissa and exponent tensors such that
+   [MATH:
+   <semantics><mrow><mtext>input</mtext><mo>=</mo><mtext>mantissa</mtext><
+   mo>×</mo><msup><mn>2</mn><mtext>exponent</mtext></msup></mrow><annotati
+   on encoding="application/x-tex">\text{input} = \text{mantissa} \times
+   2^{\text{exponent}}</annotation></semantics> :MATH]
+   input=mantissa×2exponent.
+
+   [430]gradient
+
+   Estimates the gradient of a function
+   [MATH: <semantics><mrow><mi>g</mi><mo>:</mo><msup><mi
+   mathvariant="double-struck">R</mi><mi>n</mi></msup><mo>→</mo><mi
+   mathvariant="double-struck">R</mi></mrow><annotation
+   encoding="application/x-tex">g : \mathbb{R}^n \rightarrow
+   \mathbb{R}</annotation></semantics> :MATH]
+   g:Rn→R in one or more dimensions using the [431]second-order accurate
+   central differences method and either first or second order estimates
+   at the boundaries.
+
+   [432]imag
+
+   Returns a new tensor containing imaginary values of the self tensor.
+
+   [433]ldexp
+
+   Multiplies input by 2 ** other.
+
+   [434]lerp
+
+   Does a linear interpolation of two tensors start (given by input) and
+   end based on a scalar or tensor weight and returns the resulting out
+   tensor.
+
+   [435]lgamma
+
+   Computes the natural logarithm of the absolute value of the gamma
+   function on input.
+
+   [436]log
+
+   Returns a new tensor with the natural logarithm of the elements of
+   input.
+
+   [437]log10
+
+   Returns a new tensor with the logarithm to the base 10 of the elements
+   of input.
+
+   [438]log1p
+
+   Returns a new tensor with the natural logarithm of (1 + input).
+
+   [439]log2
+
+   Returns a new tensor with the logarithm to the base 2 of the elements
+   of input.
+
+   [440]logaddexp
+
+   Logarithm of the sum of exponentiations of the inputs.
+
+   [441]logaddexp2
+
+   Logarithm of the sum of exponentiations of the inputs in base-2.
+
+   [442]logical_and
+
+   Computes the element-wise logical AND of the given input tensors.
+
+   [443]logical_not
+
+   Computes the element-wise logical NOT of the given input tensor.
+
+   [444]logical_or
+
+   Computes the element-wise logical OR of the given input tensors.
+
+   [445]logical_xor
+
+   Computes the element-wise logical XOR of the given input tensors.
+
+   [446]logit
+
+   Alias for [447]torch.special.logit().
+
+   [448]hypot
+
+   Given the legs of a right triangle, return its hypotenuse.
+
+   [449]i0
+
+   Alias for [450]torch.special.i0().
+
+   [451]igamma
+
+   Alias for [452]torch.special.gammainc().
+
+   [453]igammac
+
+   Alias for [454]torch.special.gammaincc().
+
+   [455]mul
+
+   Multiplies input by other.
+
+   [456]multiply
+
+   Alias for [457]torch.mul().
+
+   [458]mvlgamma
+
+   Alias for [459]torch.special.multigammaln().
+
+   [460]nan_to_num
+
+   Replaces NaN, positive infinity, and negative infinity values in input
+   with the values specified by nan, posinf, and neginf, respectively.
+
+   [461]neg
+
+   Returns a new tensor with the negative of the elements of input.
+
+   [462]negative
+
+   Alias for [463]torch.neg()
+
+   [464]nextafter
+
+   Return the next floating-point value after input towards other,
+   elementwise.
+
+   [465]polygamma
+
+   Alias for [466]torch.special.polygamma().
+
+   [467]positive
+
+   Returns input.
+
+   [468]pow
+
+   Takes the power of each element in input with exponent and returns a
+   tensor with the result.
+
+   [469]quantized_batch_norm
+
+   Applies batch normalization on a 4D (NCHW) quantized tensor.
+
+   [470]quantized_max_pool1d
+
+   Applies a 1D max pooling over an input quantized tensor composed of
+   several input planes.
+
+   [471]quantized_max_pool2d
+
+   Applies a 2D max pooling over an input quantized tensor composed of
+   several input planes.
+
+   [472]rad2deg
+
+   Returns a new tensor with each of the elements of input converted from
+   angles in radians to degrees.
+
+   [473]real
+
+   Returns a new tensor containing real values of the self tensor.
+
+   [474]reciprocal
+
+   Returns a new tensor with the reciprocal of the elements of input
+
+   [475]remainder
+
+   Computes [476]Python's modulus operation entrywise.
+
+   [477]round
+
+   Rounds elements of input to the nearest integer.
+
+   [478]rsqrt
+
+   Returns a new tensor with the reciprocal of the square-root of each of
+   the elements of input.
+
+   [479]sigmoid
+
+   Alias for [480]torch.special.expit().
+
+   [481]sign
+
+   Returns a new tensor with the signs of the elements of input.
+
+   [482]sgn
+
+   This function is an extension of torch.sign() to complex tensors.
+
+   [483]signbit
+
+   Tests if each element of input has its sign bit set or not.
+
+   [484]sin
+
+   Returns a new tensor with the sine of the elements of input.
+
+   [485]sinc
+
+   Alias for [486]torch.special.sinc().
+
+   [487]sinh
+
+   Returns a new tensor with the hyperbolic sine of the elements of input.
+
+   [488]softmax
+
+   Alias for [489]torch.nn.functional.softmax().
+
+   [490]sqrt
+
+   Returns a new tensor with the square-root of the elements of input.
+
+   [491]square
+
+   Returns a new tensor with the square of the elements of input.
+
+   [492]sub
+
+   Subtracts other, scaled by alpha, from input.
+
+   [493]subtract
+
+   Alias for [494]torch.sub().
+
+   [495]tan
+
+   Returns a new tensor with the tangent of the elements of input.
+
+   [496]tanh
+
+   Returns a new tensor with the hyperbolic tangent of the elements of
+   input.
+
+   [497]true_divide
+
+   Alias for [498]torch.div() with rounding_mode=None.
+
+   [499]trunc
+
+   Returns a new tensor with the truncated integer values of the elements
+   of input.
+
+   [500]xlogy
+
+   Alias for [501]torch.special.xlogy().
+
+Reduction Ops[502]¶
+
+   [503]argmax
+
+   Returns the indices of the maximum value of all elements in the input
+   tensor.
+
+   [504]argmin
+
+   Returns the indices of the minimum value(s) of the flattened tensor or
+   along a dimension
+
+   [505]amax
+
+   Returns the maximum value of each slice of the input tensor in the
+   given dimension(s) dim.
+
+   [506]amin
+
+   Returns the minimum value of each slice of the input tensor in the
+   given dimension(s) dim.
+
+   [507]aminmax
+
+   Computes the minimum and maximum values of the input tensor.
+
+   [508]all
+
+   Tests if all elements in input evaluate to True.
+
+   [509]any
+
+   Tests if any element in input evaluates to True.
+
+   [510]max
+
+   Returns the maximum value of all elements in the input tensor.
+
+   [511]min
+
+   Returns the minimum value of all elements in the input tensor.
+
+   [512]dist
+
+   Returns the p-norm of (input - other)
+
+   [513]logsumexp
+
+   Returns the log of summed exponentials of each row of the input tensor
+   in the given dimension dim.
+
+   [514]mean
+
+   [515]nanmean
+
+   Computes the mean of all non-NaN elements along the specified
+   dimensions.
+
+   [516]median
+
+   Returns the median of the values in input.
+
+   [517]nanmedian
+
+   Returns the median of the values in input, ignoring NaN values.
+
+   [518]mode
+
+   Returns a namedtuple (values, indices) where values is the mode value
+   of each row of the input tensor in the given dimension dim, i.e. a
+   value which appears most often in that row, and indices is the index
+   location of each mode value found.
+
+   [519]norm
+
+   Returns the matrix norm or vector norm of a given tensor.
+
+   [520]nansum
+
+   Returns the sum of all elements, treating Not a Numbers (NaNs) as zero.
+
+   [521]prod
+
+   Returns the product of all elements in the input tensor.
+
+   [522]quantile
+
+   Computes the q-th quantiles of each row of the input tensor along the
+   dimension dim.
+
+   [523]nanquantile
+
+   This is a variant of [524]torch.quantile() that "ignores" NaN values,
+   computing the quantiles q as if NaN values in input did not exist.
+
+   [525]std
+
+   Calculates the standard deviation over the dimensions specified by dim.
+
+   [526]std_mean
+
+   Calculates the standard deviation and mean over the dimensions
+   specified by dim.
+
+   [527]sum
+
+   Returns the sum of all elements in the input tensor.
+
+   [528]unique
+
+   Returns the unique elements of the input tensor.
+
+   [529]unique_consecutive
+
+   Eliminates all but the first element from every consecutive group of
+   equivalent elements.
+
+   [530]var
+
+   Calculates the variance over the dimensions specified by dim.
+
+   [531]var_mean
+
+   Calculates the variance and mean over the dimensions specified by dim.
+
+   [532]count_nonzero
+
+   Counts the number of non-zero values in the tensor input along the
+   given dim.
+
+Comparison Ops[533]¶
+
+   [534]allclose
+
+   This function checks if input and other satisfy the condition:
+
+   [535]argsort
+
+   Returns the indices that sort a tensor along a given dimension in
+   ascending order by value.
+
+   [536]eq
+
+   Computes element-wise equality
+
+   [537]equal
+
+   True if two tensors have the same size and elements, False otherwise.
+
+   [538]ge
+
+   Computes
+   [MATH:
+   <semantics><mrow><mtext>input</mtext><mo>≥</mo><mtext>other</mtext></mr
+   ow><annotation encoding="application/x-tex">\text{input} \geq
+   \text{other}</annotation></semantics> :MATH]
+   input≥other element-wise.
+
+   [539]greater_equal
+
+   Alias for [540]torch.ge().
+
+   [541]gt
+
+   Computes
+   [MATH:
+   <semantics><mrow><mtext>input</mtext><mo>></mo><mtext>other</mtext></mr
+   ow><annotation encoding="application/x-tex">\text{input} >
+   \text{other}</annotation></semantics> :MATH]
+   input>other element-wise.
+
+   [542]greater
+
+   Alias for [543]torch.gt().
+
+   [544]isclose
+
+   Returns a new tensor with boolean elements representing if each element
+   of input is "close" to the corresponding element of other.
+
+   [545]isfinite
+
+   Returns a new tensor with boolean elements representing if each element
+   is finite or not.
+
+   [546]isin
+
+   Tests if each element of elements is in test_elements.
+
+   [547]isinf
+
+   Tests if each element of input is infinite (positive or negative
+   infinity) or not.
+
+   [548]isposinf
+
+   Tests if each element of input is positive infinity or not.
+
+   [549]isneginf
+
+   Tests if each element of input is negative infinity or not.
+
+   [550]isnan
+
+   Returns a new tensor with boolean elements representing if each element
+   of input is NaN or not.
+
+   [551]isreal
+
+   Returns a new tensor with boolean elements representing if each element
+   of input is real-valued or not.
+
+   [552]kthvalue
+
+   Returns a namedtuple (values, indices) where values is the k th
+   smallest element of each row of the input tensor in the given dimension
+   dim.
+
+   [553]le
+
+   Computes
+   [MATH:
+   <semantics><mrow><mtext>input</mtext><mo>≤</mo><mtext>other</mtext></mr
+   ow><annotation encoding="application/x-tex">\text{input} \leq
+   \text{other}</annotation></semantics> :MATH]
+   input≤other element-wise.
+
+   [554]less_equal
+
+   Alias for [555]torch.le().
+
+   [556]lt
+
+   Computes
+   [MATH:
+   <semantics><mrow><mtext>input</mtext><mo><</mo><mtext>other</mtext></mr
+   ow><annotation encoding="application/x-tex">\text{input} <
+   \text{other}</annotation></semantics> :MATH]
+   input<other element-wise.
+
+   [557]less
+
+   Alias for [558]torch.lt().
+
+   [559]maximum
+
+   Computes the element-wise maximum of input and other.
+
+   [560]minimum
+
+   Computes the element-wise minimum of input and other.
+
+   [561]fmax
+
+   Computes the element-wise maximum of input and other.
+
+   [562]fmin
+
+   Computes the element-wise minimum of input and other.
+
+   [563]ne
+
+   Computes
+   [MATH: <semantics><mrow><mtext>input</mtext><mo
+   mathvariant="normal">≠</mo><mtext>other</mtext></mrow><annotation
+   encoding="application/x-tex">\text{input} \neq
+   \text{other}</annotation></semantics> :MATH]
+   input=other element-wise.
+
+   [564]not_equal
+
+   Alias for [565]torch.ne().
+
+   [566]sort
+
+   Sorts the elements of the input tensor along a given dimension in
+   ascending order by value.
+
+   [567]topk
+
+   Returns the k largest elements of the given input tensor along a given
+   dimension.
+
+   [568]msort
+
+   Sorts the elements of the input tensor along its first dimension in
+   ascending order by value.
+
+Spectral Ops[569]¶
+
+   [570]stft
+
+   Short-time Fourier transform (STFT).
+
+   [571]istft
+
+   Inverse short time Fourier Transform.
+
+   [572]bartlett_window
+
+   Bartlett window function.
+
+   [573]blackman_window
+
+   Blackman window function.
+
+   [574]hamming_window
+
+   Hamming window function.
+
+   [575]hann_window
+
+   Hann window function.
+
+   [576]kaiser_window
+
+   Computes the Kaiser window with window length window_length and shape
+   parameter beta.
+
+Other Operations[577]¶
+
+   [578]atleast_1d
+
+   Returns a 1-dimensional view of each input tensor with zero dimensions.
+
+   [579]atleast_2d
+
+   Returns a 2-dimensional view of each input tensor with zero dimensions.
+
+   [580]atleast_3d
+
+   Returns a 3-dimensional view of each input tensor with zero dimensions.
+
+   [581]bincount
+
+   Count the frequency of each value in an array of non-negative ints.
+
+   [582]block_diag
+
+   Create a block diagonal matrix from provided tensors.
+
+   [583]broadcast_tensors
+
+   Broadcasts the given tensors according to [584]Broadcasting semantics.
+
+   [585]broadcast_to
+
+   Broadcasts input to the shape shape.
+
+   [586]broadcast_shapes
+
+   Similar to [587]broadcast_tensors() but for shapes.
+
+   [588]bucketize
+
+   Returns the indices of the buckets to which each value in the input
+   belongs, where the boundaries of the buckets are set by boundaries.
+
+   [589]cartesian_prod
+
+   Do cartesian product of the given sequence of tensors.
+
+   [590]cdist
+
+   Computes batched the p-norm distance between each pair of the two
+   collections of row vectors.
+
+   [591]clone
+
+   Returns a copy of input.
+
+   [592]combinations
+
+   Compute combinations of length
+   [MATH: <semantics><mrow><mi>r</mi></mrow><annotation
+   encoding="application/x-tex">r</annotation></semantics> :MATH]
+   r of the given tensor.
+
+   [593]corrcoef
+
+   Estimates the Pearson product-moment correlation coefficient matrix of
+   the variables given by the input matrix, where rows are the variables
+   and columns are the observations.
+
+   [594]cov
+
+   Estimates the covariance matrix of the variables given by the input
+   matrix, where rows are the variables and columns are the observations.
+
+   [595]cross
+
+   Returns the cross product of vectors in dimension dim of input and
+   other.
+
+   [596]cummax
+
+   Returns a namedtuple (values, indices) where values is the cumulative
+   maximum of elements of input in the dimension dim.
+
+   [597]cummin
+
+   Returns a namedtuple (values, indices) where values is the cumulative
+   minimum of elements of input in the dimension dim.
+
+   [598]cumprod
+
+   Returns the cumulative product of elements of input in the dimension
+   dim.
+
+   [599]cumsum
+
+   Returns the cumulative sum of elements of input in the dimension dim.
+
+   [600]diag
+
+     * If input is a vector (1-D tensor), then returns a 2-D square tensor
+
+   [601]diag_embed
+
+   Creates a tensor whose diagonals of certain 2D planes (specified by
+   dim1 and dim2) are filled by input.
+
+   [602]diagflat
+
+     * If input is a vector (1-D tensor), then returns a 2-D square tensor
+
+   [603]diagonal
+
+   Returns a partial view of input with the its diagonal elements with
+   respect to dim1 and dim2 appended as a dimension at the end of the
+   shape.
+
+   [604]diff
+
+   Computes the n-th forward difference along the given dimension.
+
+   [605]einsum
+
+   Sums the product of the elements of the input operands along dimensions
+   specified using a notation based on the Einstein summation convention.
+
+   [606]flatten
+
+   Flattens input by reshaping it into a one-dimensional tensor.
+
+   [607]flip
+
+   Reverse the order of an n-D tensor along given axis in dims.
+
+   [608]fliplr
+
+   Flip tensor in the left/right direction, returning a new tensor.
+
+   [609]flipud
+
+   Flip tensor in the up/down direction, returning a new tensor.
+
+   [610]kron
+
+   Computes the Kronecker product, denoted by
+   [MATH: <semantics><mrow><mo>⊗</mo></mrow><annotation
+   encoding="application/x-tex">\otimes</annotation></semantics> :MATH]
+   ⊗, of input and other.
+
+   [611]rot90
+
+   Rotate an n-D tensor by 90 degrees in the plane specified by dims axis.
+
+   [612]gcd
+
+   Computes the element-wise greatest common divisor (GCD) of input and
+   other.
+
+   [613]histc
+
+   Computes the histogram of a tensor.
+
+   [614]histogram
+
+   Computes a histogram of the values in a tensor.
+
+   [615]histogramdd
+
+   Computes a multi-dimensional histogram of the values in a tensor.
+
+   [616]meshgrid
+
+   Creates grids of coordinates specified by the 1D inputs in
+   attr:tensors.
+
+   [617]lcm
+
+   Computes the element-wise least common multiple (LCM) of input and
+   other.
+
+   [618]logcumsumexp
+
+   Returns the logarithm of the cumulative summation of the exponentiation
+   of elements of input in the dimension dim.
+
+   [619]ravel
+
+   Return a contiguous flattened tensor.
+
+   [620]renorm
+
+   Returns a tensor where each sub-tensor of input along dimension dim is
+   normalized such that the p-norm of the sub-tensor is lower than the
+   value maxnorm
+
+   [621]repeat_interleave
+
+   Repeat elements of a tensor.
+
+   [622]roll
+
+   Roll the tensor input along the given dimension(s).
+
+   [623]searchsorted
+
+   Find the indices from the innermost dimension of sorted_sequence such
+   that, if the corresponding values in values were inserted before the
+   indices, when sorted, the order of the corresponding innermost
+   dimension within sorted_sequence would be preserved.
+
+   [624]tensordot
+
+   Returns a contraction of a and b over multiple dimensions.
+
+   [625]trace
+
+   Returns the sum of the elements of the diagonal of the input 2-D
+   matrix.
+
+   [626]tril
+
+   Returns the lower triangular part of the matrix (2-D tensor) or batch
+   of matrices input, the other elements of the result tensor out are set
+   to 0.
+
+   [627]tril_indices
+
+   Returns the indices of the lower triangular part of a row-by- col
+   matrix in a 2-by-N Tensor, where the first row contains row coordinates
+   of all indices and the second row contains column coordinates.
+
+   [628]triu
+
+   Returns the upper triangular part of a matrix (2-D tensor) or batch of
+   matrices input, the other elements of the result tensor out are set to
+   0.
+
+   [629]triu_indices
+
+   Returns the indices of the upper triangular part of a row by col matrix
+   in a 2-by-N Tensor, where the first row contains row coordinates of all
+   indices and the second row contains column coordinates.
+
+   [630]unflatten
+
+   Expands a dimension of the input tensor over multiple dimensions.
+
+   [631]vander
+
+   Generates a Vandermonde matrix.
+
+   [632]view_as_real
+
+   Returns a view of input as a real tensor.
+
+   [633]view_as_complex
+
+   Returns a view of input as a complex tensor.
+
+   [634]resolve_conj
+
+   Returns a new tensor with materialized conjugation if input's conjugate
+   bit is set to True, else returns input.
+
+   [635]resolve_neg
+
+   Returns a new tensor with materialized negation if input's negative bit
+   is set to True, else returns input.
+
+BLAS and LAPACK Operations[636]¶
+
+   [637]addbmm
+
+   Performs a batch matrix-matrix product of matrices stored in batch1 and
+   batch2, with a reduced add step (all matrix multiplications get
+   accumulated along the first dimension).
+
+   [638]addmm
+
+   Performs a matrix multiplication of the matrices mat1 and mat2.
+
+   [639]addmv
+
+   Performs a matrix-vector product of the matrix mat and the vector vec.
+
+   [640]addr
+
+   Performs the outer-product of vectors vec1 and vec2 and adds it to the
+   matrix input.
+
+   [641]baddbmm
+
+   Performs a batch matrix-matrix product of matrices in batch1 and
+   batch2.
+
+   [642]bmm
+
+   Performs a batch matrix-matrix product of matrices stored in input and
+   mat2.
+
+   [643]chain_matmul
+
+   Returns the matrix product of the
+   [MATH: <semantics><mrow><mi>N</mi></mrow><annotation
+   encoding="application/x-tex">N</annotation></semantics> :MATH]
+   N 2-D tensors.
+
+   [644]cholesky
+
+   Computes the Cholesky decomposition of a symmetric positive-definite
+   matrix
+   [MATH: <semantics><mrow><mi>A</mi></mrow><annotation
+   encoding="application/x-tex">A</annotation></semantics> :MATH]
+   A or for batches of symmetric positive-definite matrices.
+
+   [645]cholesky_inverse
+
+   Computes the inverse of a complex Hermitian or real symmetric
+   positive-definite matrix given its Cholesky decomposition.
+
+   [646]cholesky_solve
+
+   Computes the solution of a system of linear equations with complex
+   Hermitian or real symmetric positive-definite lhs given its Cholesky
+   decomposition.
+
+   [647]dot
+
+   Computes the dot product of two 1D tensors.
+
+   [648]geqrf
+
+   This is a low-level function for calling LAPACK's geqrf directly.
+
+   [649]ger
+
+   Alias of [650]torch.outer().
+
+   [651]inner
+
+   Computes the dot product for 1D tensors.
+
+   [652]inverse
+
+   Alias for [653]torch.linalg.inv()
+
+   [654]det
+
+   Alias for [655]torch.linalg.det()
+
+   [656]logdet
+
+   Calculates log determinant of a square matrix or batches of square
+   matrices.
+
+   [657]slogdet
+
+   Alias for [658]torch.linalg.slogdet()
+
+   [659]lu
+
+   Computes the LU factorization of a matrix or batches of matrices A.
+
+   [660]lu_solve
+
+   Returns the LU solve of the linear system
+   [MATH:
+   <semantics><mrow><mi>A</mi><mi>x</mi><mo>=</mo><mi>b</mi></mrow><annota
+   tion encoding="application/x-tex">Ax = b</annotation></semantics>
+   :MATH]
+   Ax=b using the partially pivoted LU factorization of A from
+   [661]lu_factor().
+
+   [662]lu_unpack
+
+   Unpacks the LU decomposition returned by [663]lu_factor() into the P,
+   L, U matrices.
+
+   [664]matmul
+
+   Matrix product of two tensors.
+
+   [665]matrix_power
+
+   Alias for [666]torch.linalg.matrix_power()
+
+   [667]matrix_exp
+
+   Alias for [668]torch.linalg.matrix_exp().
+
+   [669]mm
+
+   Performs a matrix multiplication of the matrices input and mat2.
+
+   [670]mv
+
+   Performs a matrix-vector product of the matrix input and the vector
+   vec.
+
+   [671]orgqr
+
+   Alias for [672]torch.linalg.householder_product().
+
+   [673]ormqr
+
+   Computes the matrix-matrix multiplication of a product of Householder
+   matrices with a general matrix.
+
+   [674]outer
+
+   Outer product of input and vec2.
+
+   [675]pinverse
+
+   Alias for [676]torch.linalg.pinv()
+
+   [677]qr
+
+   Computes the QR decomposition of a matrix or a batch of matrices input,
+   and returns a namedtuple (Q, R) of tensors such that
+   [MATH:
+   <semantics><mrow><mtext>input</mtext><mo>=</mo><mi>Q</mi><mi>R</mi></mr
+   ow><annotation encoding="application/x-tex">\text{input} = Q
+   R</annotation></semantics> :MATH]
+   input=QR with
+   [MATH: <semantics><mrow><mi>Q</mi></mrow><annotation
+   encoding="application/x-tex">Q</annotation></semantics> :MATH]
+   Q being an orthogonal matrix or batch of orthogonal matrices and
+   [MATH: <semantics><mrow><mi>R</mi></mrow><annotation
+   encoding="application/x-tex">R</annotation></semantics> :MATH]
+   R being an upper triangular matrix or batch of upper triangular
+   matrices.
+
+   [678]svd
+
+   Computes the singular value decomposition of either a matrix or batch
+   of matrices input.
+
+   [679]svd_lowrank
+
+   Return the singular value decomposition (U, S, V) of a matrix, batches
+   of matrices, or a sparse matrix
+   [MATH: <semantics><mrow><mi>A</mi></mrow><annotation
+   encoding="application/x-tex">A</annotation></semantics> :MATH]
+   A such that
+   [MATH: <semantics><mrow><mi>A</mi><mo>≈</mo><mi>U</mi><mi
+   mathvariant="normal">diag</mi><mo>⁡</mo><mo
+   stretchy="false">(</mo><mi>S</mi><mo
+   stretchy="false">)</mo><msup><mi>V</mi><mtext>H</mtext></msup></mrow><a
+   nnotation encoding="application/x-tex">A \approx U
+   \operatorname{diag}(S) V^{\text{H}}</annotation></semantics> :MATH]
+   A≈Udiag(S)VH.
+
+   [680]pca_lowrank
+
+   Performs linear Principal Component Analysis (PCA) on a low-rank
+   matrix, batches of such matrices, or sparse matrix.
+
+   [681]lobpcg
+
+   Find the k largest (or smallest) eigenvalues and the corresponding
+   eigenvectors of a symmetric positive definite generalized eigenvalue
+   problem using matrix-free LOBPCG methods.
+
+   [682]trapz
+
+   Alias for [683]torch.trapezoid().
+
+   [684]trapezoid
+
+   Computes the [685]trapezoidal rule along dim.
+
+   [686]cumulative_trapezoid
+
+   Cumulatively computes the [687]trapezoidal rule along dim.
+
+   [688]triangular_solve
+
+   Solves a system of equations with a square upper or lower triangular
+   invertible matrix
+   [MATH: <semantics><mrow><mi>A</mi></mrow><annotation
+   encoding="application/x-tex">A</annotation></semantics> :MATH]
+   A and multiple right-hand sides
+   [MATH: <semantics><mrow><mi>b</mi></mrow><annotation
+   encoding="application/x-tex">b</annotation></semantics> :MATH]
+   b.
+
+   [689]vdot
+
+   Computes the dot product of two 1D vectors along a dimension.
+
+Foreach Operations[690]¶
+
+   Warning
+
+   This API is in beta and subject to future changes. Forward-mode AD is
+   not supported.
+
+   [691]_foreach_abs
+
+   Apply [692]torch.abs() to each Tensor of the input list.
+
+   [693]_foreach_abs_
+
+   Apply [694]torch.abs() to each Tensor of the input list.
+
+   [695]_foreach_acos
+
+   Apply [696]torch.acos() to each Tensor of the input list.
+
+   [697]_foreach_acos_
+
+   Apply [698]torch.acos() to each Tensor of the input list.
+
+   [699]_foreach_asin
+
+   Apply [700]torch.asin() to each Tensor of the input list.
+
+   [701]_foreach_asin_
+
+   Apply [702]torch.asin() to each Tensor of the input list.
+
+   [703]_foreach_atan
+
+   Apply [704]torch.atan() to each Tensor of the input list.
+
+   [705]_foreach_atan_
+
+   Apply [706]torch.atan() to each Tensor of the input list.
+
+   [707]_foreach_ceil
+
+   Apply [708]torch.ceil() to each Tensor of the input list.
+
+   [709]_foreach_ceil_
+
+   Apply [710]torch.ceil() to each Tensor of the input list.
+
+   [711]_foreach_cos
+
+   Apply [712]torch.cos() to each Tensor of the input list.
+
+   [713]_foreach_cos_
+
+   Apply [714]torch.cos() to each Tensor of the input list.
+
+   [715]_foreach_cosh
+
+   Apply [716]torch.cosh() to each Tensor of the input list.
+
+   [717]_foreach_cosh_
+
+   Apply [718]torch.cosh() to each Tensor of the input list.
+
+   [719]_foreach_erf
+
+   Apply [720]torch.erf() to each Tensor of the input list.
+
+   [721]_foreach_erf_
+
+   Apply [722]torch.erf() to each Tensor of the input list.
+
+   [723]_foreach_erfc
+
+   Apply [724]torch.erfc() to each Tensor of the input list.
+
+   [725]_foreach_erfc_
+
+   Apply [726]torch.erfc() to each Tensor of the input list.
+
+   [727]_foreach_exp
+
+   Apply [728]torch.exp() to each Tensor of the input list.
+
+   [729]_foreach_exp_
+
+   Apply [730]torch.exp() to each Tensor of the input list.
+
+   [731]_foreach_expm1
+
+   Apply [732]torch.expm1() to each Tensor of the input list.
+
+   [733]_foreach_expm1_
+
+   Apply [734]torch.expm1() to each Tensor of the input list.
+
+   [735]_foreach_floor
+
+   Apply [736]torch.floor() to each Tensor of the input list.
+
+   [737]_foreach_floor_
+
+   Apply [738]torch.floor() to each Tensor of the input list.
+
+   [739]_foreach_log
+
+   Apply [740]torch.log() to each Tensor of the input list.
+
+   [741]_foreach_log_
+
+   Apply [742]torch.log() to each Tensor of the input list.
+
+   [743]_foreach_log10
+
+   Apply [744]torch.log10() to each Tensor of the input list.
+
+   [745]_foreach_log10_
+
+   Apply [746]torch.log10() to each Tensor of the input list.
+
+   [747]_foreach_log1p
+
+   Apply [748]torch.log1p() to each Tensor of the input list.
+
+   [749]_foreach_log1p_
+
+   Apply [750]torch.log1p() to each Tensor of the input list.
+
+   [751]_foreach_log2
+
+   Apply [752]torch.log2() to each Tensor of the input list.
+
+   [753]_foreach_log2_
+
+   Apply [754]torch.log2() to each Tensor of the input list.
+
+   [755]_foreach_neg
+
+   Apply [756]torch.neg() to each Tensor of the input list.
+
+   [757]_foreach_neg_
+
+   Apply [758]torch.neg() to each Tensor of the input list.
+
+   [759]_foreach_tan
+
+   Apply [760]torch.tan() to each Tensor of the input list.
+
+   [761]_foreach_tan_
+
+   Apply [762]torch.tan() to each Tensor of the input list.
+
+   [763]_foreach_sin
+
+   Apply [764]torch.sin() to each Tensor of the input list.
+
+   [765]_foreach_sin_
+
+   Apply [766]torch.sin() to each Tensor of the input list.
+
+   [767]_foreach_sinh
+
+   Apply [768]torch.sinh() to each Tensor of the input list.
+
+   [769]_foreach_sinh_
+
+   Apply [770]torch.sinh() to each Tensor of the input list.
+
+   [771]_foreach_round
+
+   Apply [772]torch.round() to each Tensor of the input list.
+
+   [773]_foreach_round_
+
+   Apply [774]torch.round() to each Tensor of the input list.
+
+   [775]_foreach_sqrt
+
+   Apply [776]torch.sqrt() to each Tensor of the input list.
+
+   [777]_foreach_sqrt_
+
+   Apply [778]torch.sqrt() to each Tensor of the input list.
+
+   [779]_foreach_lgamma
+
+   Apply [780]torch.lgamma() to each Tensor of the input list.
+
+   [781]_foreach_lgamma_
+
+   Apply [782]torch.lgamma() to each Tensor of the input list.
+
+   [783]_foreach_frac
+
+   Apply [784]torch.frac() to each Tensor of the input list.
+
+   [785]_foreach_frac_
+
+   Apply [786]torch.frac() to each Tensor of the input list.
+
+   [787]_foreach_reciprocal
+
+   Apply [788]torch.reciprocal() to each Tensor of the input list.
+
+   [789]_foreach_reciprocal_
+
+   Apply [790]torch.reciprocal() to each Tensor of the input list.
+
+   [791]_foreach_sigmoid
+
+   Apply [792]torch.sigmoid() to each Tensor of the input list.
+
+   [793]_foreach_sigmoid_
+
+   Apply [794]torch.sigmoid() to each Tensor of the input list.
+
+   [795]_foreach_trunc
+
+   Apply [796]torch.trunc() to each Tensor of the input list.
+
+   [797]_foreach_trunc_
+
+   Apply [798]torch.trunc() to each Tensor of the input list.
+
+   [799]_foreach_zero_
+
+   Apply torch.zero() to each Tensor of the input list.
+
+Utilities[800]¶
+
+   [801]compiled_with_cxx11_abi
+
+   Returns whether PyTorch was built with _GLIBCXX_USE_CXX11_ABI=1
+
+   [802]result_type
+
+   Returns the [803]torch.dtype that would result from performing an
+   arithmetic operation on the provided input tensors.
+
+   [804]can_cast
+
+   Determines if a type conversion is allowed under PyTorch casting rules
+   described in the type promotion [805]documentation.
+
+   [806]promote_types
+
+   Returns the [807]torch.dtype with the smallest size and scalar kind
+   that is not smaller nor of lower kind than either type1 or type2.
+
+   [808]use_deterministic_algorithms
+
+   Sets whether PyTorch operations must use "deterministic" algorithms.
+
+   [809]are_deterministic_algorithms_enabled
+
+   Returns True if the global deterministic flag is turned on.
+
+   [810]is_deterministic_algorithms_warn_only_enabled
+
+   Returns True if the global deterministic flag is set to warn only.
+
+   [811]set_deterministic_debug_mode
+
+   Sets the debug mode for deterministic operations.
+
+   [812]get_deterministic_debug_mode
+
+   Returns the current value of the debug mode for deterministic
+   operations.
+
+   [813]set_float32_matmul_precision
+
+   Sets the internal precision of float32 matrix multiplications.
+
+   [814]get_float32_matmul_precision
+
+   Returns the current value of float32 matrix multiplication precision.
+
+   [815]set_warn_always
+
+   When this flag is False (default) then some PyTorch warnings may only
+   appear once per process.
+
+   [816]get_device_module
+
+   Returns the module associated with a given device(e.g.,
+   torch.device('cuda'), "mtia:0", "xpu", ...).
+
+   [817]is_warn_always_enabled
+
+   Returns True if the global warn_always flag is turned on.
+
+   [818]vmap
+
+   vmap is the vectorizing map; vmap(func) returns a new function that
+   maps func over some dimension of the inputs.
+
+   [819]_assert
+
+   A wrapper around Python's assert which is symbolically traceable.
+
+Symbolic Numbers[820]¶
+
+   class torch.SymInt(node)[821][source][822][source][823]¶
+          Like an int (including magic methods), but redirects all
+          operations on the wrapped node. This is used in particular to
+          symbolically record operations in the symbolic shape workflow.
+
+        as_integer_ratio()[824][source][825][source][826]¶
+                Represent this int as an exact integer ratio
+
+              Return type
+                      [827]Tuple[[828]SymInt, [829]int]
+
+   class torch.SymFloat(node)[830][source][831][source][832]¶
+          Like an float (including magic methods), but redirects all
+          operations on the wrapped node. This is used in particular to
+          symbolically record operations in the symbolic shape workflow.
+
+        as_integer_ratio()[833][source][834][source][835]¶
+                Represent this float as an exact integer ratio
+
+              Return type
+                      [836]Tuple[[837]int, [838]int]
+
+        conjugate()[839][source][840][source][841]¶
+                Returns the complex conjugate of the float.
+
+              Return type
+                      [842]SymFloat
+
+        hex()[843][source][844][source][845]¶
+                Returns the hexadecimal representation of the float.
+
+              Return type
+                      [846]str
+
+        is_integer()[847][source][848][source][849]¶
+                Return True if the float is an integer.
+
+   class torch.SymBool(node)[850][source][851][source][852]¶
+          Like an bool (including magic methods), but redirects all
+          operations on the wrapped node. This is used in particular to
+          symbolically record operations in the symbolic shape workflow.
+
+          Unlike regular bools, regular boolean operators will force extra
+          guards instead of symbolically evaluate. Use the bitwise
+          operators instead to handle this.
+
+   [853]sym_float
+
+   SymInt-aware utility for float casting.
+
+   [854]sym_fresh_size
+
+   [855]sym_int
+
+   SymInt-aware utility for int casting.
+
+   [856]sym_max
+
+   SymInt-aware utility for max which avoids branching on a < b.
+
+   [857]sym_min
+
+   SymInt-aware utility for min().
+
+   [858]sym_not
+
+   SymInt-aware utility for logical negation.
+
+   [859]sym_ite
+
+   [860]sym_sum
+
+   N-ary add which is faster to compute for long lists than iterated
+   binary addition.
+
+Export Path[861]¶
+
+   Warning
+
+   This feature is a prototype and may have compatibility breaking changes
+   in the future.
+
+   export generated/exportdb/index
+
+Control Flow[862]¶
+
+   Warning
+
+   This feature is a prototype and may have compatibility breaking changes
+   in the future.
+
+   [863]cond
+
+   Conditionally applies true_fn or false_fn.
+
+Optimizations[864]¶
+
+   [865]compile
+
+   Optimizes given model/function using TorchDynamo and specified backend.
+
+   [866]torch.compile documentation
+
+Operator Tags[867]¶
+
+   class torch.Tag[868]¶
+          Members:
+
+          core
+
+          data_dependent_output
+
+          dynamic_output_shape
+
+          flexible_layout
+
+          generated
+
+          inplace_view
+
+          maybe_aliasing_or_mutating
+
+          needs_fixed_stride_order
+
+          nondeterministic_bitwise
+
+          nondeterministic_seeded
+
+          pointwise
+
+          pt2_compliant_tag
+
+          view_copy
+
+        property name[869]¶
+
+   [870]Next [chevron-right-orange.svg] [871][chevron-right-orange.svg]
+   Previous
+     __________________________________________________________________
+
+   © Copyright 2024, PyTorch Contributors.
+   Built with [872]Sphinx using a [873]theme provided by [874]Read the
+   Docs.
+     * [875]torch
+          + [876]Tensors
+               o [877]Creation Ops
+               o [878]Indexing, Slicing, Joining, Mutating Ops
+          + [879]Accelerators
+          + [880]Generators
+          + [881]Random sampling
+               o [882]torch.default_generator
+               o [883]In-place random sampling
+               o [884]Quasi-random sampling
+          + [885]Serialization
+          + [886]Parallelism
+          + [887]Locally disabling gradient computation
+          + [888]Math operations
+               o [889]Constants
+               o [890]Pointwise Ops
+               o [891]Reduction Ops
+               o [892]Comparison Ops
+               o [893]Spectral Ops
+               o [894]Other Operations
+               o [895]BLAS and LAPACK Operations
+               o [896]Foreach Operations
+          + [897]Utilities
+          + [898]Symbolic Numbers
+               o [899]SymInt
+                    # [900]SymInt.as_integer_ratio()
+               o [901]SymFloat
+                    # [902]SymFloat.as_integer_ratio()
+                    # [903]SymFloat.conjugate()
+                    # [904]SymFloat.hex()
+                    # [905]SymFloat.is_integer()
+               o [906]SymBool
+          + [907]Export Path
+          + [908]Control Flow
+          + [909]Optimizations
+          + [910]Operator Tags
+               o [911]Tag
+                    # [912]Tag.name
+
+Docs
+
+   Access comprehensive developer documentation for PyTorch
+   [913]View Docs
+
+Tutorials
+
+   Get in-depth tutorials for beginners and advanced developers
+   [914]View Tutorials
+
+Resources
+
+   Find development resources and get your questions answered
+   [915]View Resources
+
+     * [916]PyTorch
+     * [917]Get Started
+     * [918]Features
+     * [919]Ecosystem
+     * [920]Blog
+     * [921]Contributing
+
+     * [922]Resources
+     * [923]Tutorials
+     * [924]Docs
+     * [925]Discuss
+     * [926]Github Issues
+     * [927]Brand Guidelines
+
+     * Stay up to date
+     * [928]Facebook
+     * [929]Twitter
+     * [930]YouTube
+     * [931]LinkedIn
+
+     * PyTorch Podcasts
+     * [932]Spotify
+     * [933]Apple
+     * [934]Google
+     * [935]Amazon
+
+     * [936]Terms
+     * |
+     * [937]Privacy
+
+   © Copyright The Linux Foundation. The PyTorch Foundation is a project
+   of The Linux Foundation. For web site terms of use, trademark policy
+   and other policies applicable to The PyTorch Foundation please see
+   [938]www.linuxfoundation.org/policies/. The PyTorch Foundation supports
+   the PyTorch open source project, which has been established as PyTorch
+   Project a Series of LF Projects, LLC. For policies applicable to the
+   PyTorch Project a Series of LF Projects, LLC, please see
+   [939]www.lfprojects.org/policies/.
+
+   To analyze traffic and optimize your experience, we serve cookies on
+   this site. By clicking or navigating, you agree to allow our usage of
+   cookies. As the current maintainers of this site, Facebook’s Cookies
+   Policy applies. Learn more, including about available controls:
+   [940]Cookies Policy.
+   [pytorch-x.svg]
+
+     * Learn
+
+     * [941]Get Started
+     * [942]Tutorials
+     * [943]Learn the Basics
+     * [944]PyTorch Recipes
+     * [945]Introduction to PyTorch - YouTube Series
+
+     Ecosystem
+     * [946]Tools
+     * [947]Community
+     * [948]Forums
+     * [949]Developer Resources
+     * [950]Contributor Awards - 2023
+
+     Edge
+     * [951]About PyTorch Edge
+     * [952]ExecuTorch
+
+     Docs
+     * [953]PyTorch
+     * [954]PyTorch Domains
+
+     Blog & News
+     * [955]PyTorch Blog
+     * [956]Community Blog
+     * [957]Videos
+     * [958]Community Stories
+     * [959]Events
+
+     About
+     * [960]PyTorch Foundation
+     * [961]Governing Board
+
+References
+
+   Visible links:
+   1. file:///tmp/lynxXXXXImBBjn/genindex.html
+   2. file:///tmp/lynxXXXXImBBjn/search.html
+   3. file:///tmp/lynxXXXXImBBjn/generated/torch.is_tensor.html
+   4. file:///tmp/lynxXXXXImBBjn/deploy.html
+   5. https://pytorch.org/get-started
+   6. https://pytorch.org/tutorials
+   7. https://pytorch.org/tutorials/beginner/basics/intro.html
+   8. https://pytorch.org/tutorials/recipes/recipes_index.html
+   9. https://pytorch.org/tutorials/beginner/introyt.html
+  10. https://pytorch.org/ecosystem
+  11. https://pytorch.org/#community-module
+  12. https://discuss.pytorch.org/
+  13. https://pytorch.org/resources
+  14. https://pytorch.org/ecosystem/contributor-awards-2023
+  15. https://pytorch.org/edge
+  16. https://pytorch.org/executorch-overview
+  17. https://pytorch.org/docs/stable/index.html
+  18. https://pytorch.org/pytorch-domains
+  19. https://pytorch.org/blog/
+  20. https://pytorch.org/community-blog
+  21. https://pytorch.org/videos
+  22. https://pytorch.org/community-stories
+  23. https://pytorch.org/events
+  24. https://pytorch.org/foundation
+  25. https://pytorch.org/governing-board
+  26. https://pytorch.org/join
+  27. https://pytorch.org/docs/versions.html
+  28. https://forms.gle/tdrnwJhaQ9tUePxz9
+  29. file:///tmp/lynxXXXXImBBjn/community/build_ci_governance.html
+  30. file:///tmp/lynxXXXXImBBjn/community/contribution_guide.html
+  31. file:///tmp/lynxXXXXImBBjn/community/design.html
+  32. file:///tmp/lynxXXXXImBBjn/community/governance.html
+  33. file:///tmp/lynxXXXXImBBjn/community/persons_of_interest.html
+  34. file:///tmp/lynxXXXXImBBjn/notes/amp_examples.html
+  35. file:///tmp/lynxXXXXImBBjn/notes/autograd.html
+  36. file:///tmp/lynxXXXXImBBjn/notes/broadcasting.html
+  37. file:///tmp/lynxXXXXImBBjn/notes/cpu_threading_torchscript_inference.html
+  38. file:///tmp/lynxXXXXImBBjn/notes/cuda.html
+  39. file:///tmp/lynxXXXXImBBjn/notes/custom_operators.html
+  40. file:///tmp/lynxXXXXImBBjn/notes/ddp.html
+  41. file:///tmp/lynxXXXXImBBjn/notes/extending.html
+  42. file:///tmp/lynxXXXXImBBjn/notes/extending.func.html
+  43. file:///tmp/lynxXXXXImBBjn/notes/faq.html
+  44. file:///tmp/lynxXXXXImBBjn/notes/fsdp.html
+  45. file:///tmp/lynxXXXXImBBjn/notes/get_start_xpu.html
+  46. file:///tmp/lynxXXXXImBBjn/notes/gradcheck.html
+  47. file:///tmp/lynxXXXXImBBjn/notes/hip.html
+  48. file:///tmp/lynxXXXXImBBjn/notes/large_scale_deployments.html
+  49. file:///tmp/lynxXXXXImBBjn/notes/modules.html
+  50. file:///tmp/lynxXXXXImBBjn/notes/mps.html
+  51. file:///tmp/lynxXXXXImBBjn/notes/multiprocessing.html
+  52. file:///tmp/lynxXXXXImBBjn/notes/numerical_accuracy.html
+  53. file:///tmp/lynxXXXXImBBjn/notes/randomness.html
+  54. file:///tmp/lynxXXXXImBBjn/notes/serialization.html
+  55. file:///tmp/lynxXXXXImBBjn/notes/windows.html
+  56. file:///tmp/lynxXXXXImBBjn/cpp_index.html
+  57. https://pytorch.org/javadoc/
+  58. file:///tmp/lynxXXXXImBBjn/deploy.html
+  59. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html
+  60. file:///tmp/lynxXXXXImBBjn/nn.html
+  61. file:///tmp/lynxXXXXImBBjn/nn.functional.html
+  62. file:///tmp/lynxXXXXImBBjn/tensors.html
+  63. file:///tmp/lynxXXXXImBBjn/tensor_attributes.html
+  64. file:///tmp/lynxXXXXImBBjn/tensor_view.html
+  65. file:///tmp/lynxXXXXImBBjn/amp.html
+  66. file:///tmp/lynxXXXXImBBjn/autograd.html
+  67. file:///tmp/lynxXXXXImBBjn/library.html
+  68. file:///tmp/lynxXXXXImBBjn/accelerator.html
+  69. file:///tmp/lynxXXXXImBBjn/cpu.html
+  70. file:///tmp/lynxXXXXImBBjn/cuda.html
+  71. file:///tmp/lynxXXXXImBBjn/torch_cuda_memory.html
+  72. file:///tmp/lynxXXXXImBBjn/torch_cuda_memory.html#generating-a-snapshot
+  73. file:///tmp/lynxXXXXImBBjn/torch_cuda_memory.html#using-the-visualizer
+  74. file:///tmp/lynxXXXXImBBjn/torch_cuda_memory.html#snapshot-api-reference
+  75. file:///tmp/lynxXXXXImBBjn/mps.html
+  76. file:///tmp/lynxXXXXImBBjn/xpu.html
+  77. file:///tmp/lynxXXXXImBBjn/mtia.html
+  78. file:///tmp/lynxXXXXImBBjn/mtia.memory.html
+  79. file:///tmp/lynxXXXXImBBjn/meta.html
+  80. file:///tmp/lynxXXXXImBBjn/backends.html
+  81. file:///tmp/lynxXXXXImBBjn/export.html
+  82. file:///tmp/lynxXXXXImBBjn/distributed.html
+  83. file:///tmp/lynxXXXXImBBjn/distributed.tensor.html
+  84. file:///tmp/lynxXXXXImBBjn/distributed.algorithms.join.html
+  85. file:///tmp/lynxXXXXImBBjn/distributed.elastic.html
+  86. file:///tmp/lynxXXXXImBBjn/fsdp.html
+  87. file:///tmp/lynxXXXXImBBjn/distributed.fsdp.fully_shard.html
+  88. file:///tmp/lynxXXXXImBBjn/distributed.tensor.parallel.html
+  89. file:///tmp/lynxXXXXImBBjn/distributed.optim.html
+  90. file:///tmp/lynxXXXXImBBjn/distributed.pipelining.html
+  91. file:///tmp/lynxXXXXImBBjn/distributed.checkpoint.html
+  92. file:///tmp/lynxXXXXImBBjn/distributions.html
+  93. file:///tmp/lynxXXXXImBBjn/torch.compiler.html
+  94. file:///tmp/lynxXXXXImBBjn/fft.html
+  95. file:///tmp/lynxXXXXImBBjn/func.html
+  96. file:///tmp/lynxXXXXImBBjn/futures.html
+  97. file:///tmp/lynxXXXXImBBjn/fx.html
+  98. file:///tmp/lynxXXXXImBBjn/fx.experimental.html
+  99. file:///tmp/lynxXXXXImBBjn/hub.html
+ 100. file:///tmp/lynxXXXXImBBjn/jit.html
+ 101. file:///tmp/lynxXXXXImBBjn/linalg.html
+ 102. file:///tmp/lynxXXXXImBBjn/monitor.html
+ 103. file:///tmp/lynxXXXXImBBjn/signal.html
+ 104. file:///tmp/lynxXXXXImBBjn/special.html
+ 105. file:///tmp/lynxXXXXImBBjn/torch.overrides.html
+ 106. file:///tmp/lynxXXXXImBBjn/package.html
+ 107. file:///tmp/lynxXXXXImBBjn/profiler.html
+ 108. file:///tmp/lynxXXXXImBBjn/nn.init.html
+ 109. file:///tmp/lynxXXXXImBBjn/nn.attention.html
+ 110. file:///tmp/lynxXXXXImBBjn/onnx.html
+ 111. file:///tmp/lynxXXXXImBBjn/optim.html
+ 112. file:///tmp/lynxXXXXImBBjn/complex_numbers.html
+ 113. file:///tmp/lynxXXXXImBBjn/ddp_comm_hooks.html
+ 114. file:///tmp/lynxXXXXImBBjn/quantization.html
+ 115. file:///tmp/lynxXXXXImBBjn/rpc.html
+ 116. file:///tmp/lynxXXXXImBBjn/random.html
+ 117. file:///tmp/lynxXXXXImBBjn/masked.html
+ 118. file:///tmp/lynxXXXXImBBjn/nested.html
+ 119. file:///tmp/lynxXXXXImBBjn/size.html
+ 120. file:///tmp/lynxXXXXImBBjn/sparse.html
+ 121. file:///tmp/lynxXXXXImBBjn/storage.html
+ 122. file:///tmp/lynxXXXXImBBjn/testing.html
+ 123. file:///tmp/lynxXXXXImBBjn/utils.html
+ 124. file:///tmp/lynxXXXXImBBjn/benchmark_utils.html
+ 125. file:///tmp/lynxXXXXImBBjn/bottleneck.html
+ 126. file:///tmp/lynxXXXXImBBjn/checkpoint.html
+ 127. file:///tmp/lynxXXXXImBBjn/cpp_extension.html
+ 128. file:///tmp/lynxXXXXImBBjn/data.html
+ 129. file:///tmp/lynxXXXXImBBjn/deterministic.html
+ 130. file:///tmp/lynxXXXXImBBjn/jit_utils.html
+ 131. file:///tmp/lynxXXXXImBBjn/dlpack.html
+ 132. file:///tmp/lynxXXXXImBBjn/mobile_optimizer.html
+ 133. file:///tmp/lynxXXXXImBBjn/model_zoo.html
+ 134. file:///tmp/lynxXXXXImBBjn/tensorboard.html
+ 135. file:///tmp/lynxXXXXImBBjn/module_tracker.html
+ 136. file:///tmp/lynxXXXXImBBjn/type_info.html
+ 137. file:///tmp/lynxXXXXImBBjn/named_tensor.html
+ 138. file:///tmp/lynxXXXXImBBjn/name_inference.html
+ 139. file:///tmp/lynxXXXXImBBjn/config_mod.html
+ 140. file:///tmp/lynxXXXXImBBjn/future_mod.html
+ 141. file:///tmp/lynxXXXXImBBjn/logging.html
+ 142. file:///tmp/lynxXXXXImBBjn/torch_environment_variables.html
+ 143. https://pytorch.org/audio/stable
+ 144. https://pytorch.org/data
+ 145. https://pytorch.org/torchrec
+ 146. https://pytorch.org/serve
+ 147. https://pytorch.org/text/stable
+ 148. https://pytorch.org/vision/stable
+ 149. https://pytorch.org/xla/
+ 150. file:///tmp/lynxXXXXImBBjn/index.html
+ 151. file:///tmp/lynxXXXXImBBjn/_sources/torch.rst.txt
+ 152. https://www.googletagmanager.com/ns.html?id=GTM-T8XT4PS
+ 153. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#module-torch
+ 154. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#tensors
+ 155. file:///tmp/lynxXXXXImBBjn/generated/torch.is_tensor.html#torch.is_tensor
+ 156. file:///tmp/lynxXXXXImBBjn/generated/torch.is_storage.html#torch.is_storage
+ 157. file:///tmp/lynxXXXXImBBjn/generated/torch.is_complex.html#torch.is_complex
+ 158. file:///tmp/lynxXXXXImBBjn/generated/torch.is_conj.html#torch.is_conj
+ 159. file:///tmp/lynxXXXXImBBjn/generated/torch.is_floating_point.html#torch.is_floating_point
+ 160. file:///tmp/lynxXXXXImBBjn/generated/torch.is_nonzero.html#torch.is_nonzero
+ 161. file:///tmp/lynxXXXXImBBjn/generated/torch.set_default_dtype.html#torch.set_default_dtype
+ 162. file:///tmp/lynxXXXXImBBjn/generated/torch.get_default_dtype.html#torch.get_default_dtype
+ 163. file:///tmp/lynxXXXXImBBjn/tensor_attributes.html#torch.dtype
+ 164. file:///tmp/lynxXXXXImBBjn/generated/torch.set_default_device.html#torch.set_default_device
+ 165. file:///tmp/lynxXXXXImBBjn/generated/torch.get_default_device.html#torch.get_default_device
+ 166. file:///tmp/lynxXXXXImBBjn/generated/torch.set_default_tensor_type.html#torch.set_default_tensor_type
+ 167. file:///tmp/lynxXXXXImBBjn/generated/torch.numel.html#torch.numel
+ 168. file:///tmp/lynxXXXXImBBjn/generated/torch.set_printoptions.html#torch.set_printoptions
+ 169. file:///tmp/lynxXXXXImBBjn/generated/torch.set_flush_denormal.html#torch.set_flush_denormal
+ 170. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#creation-ops
+ 171. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#random-sampling
+ 172. file:///tmp/lynxXXXXImBBjn/generated/torch.rand.html#torch.rand
+ 173. file:///tmp/lynxXXXXImBBjn/generated/torch.rand_like.html#torch.rand_like
+ 174. file:///tmp/lynxXXXXImBBjn/generated/torch.randn.html#torch.randn
+ 175. file:///tmp/lynxXXXXImBBjn/generated/torch.randn_like.html#torch.randn_like
+ 176. file:///tmp/lynxXXXXImBBjn/generated/torch.randint.html#torch.randint
+ 177. file:///tmp/lynxXXXXImBBjn/generated/torch.randint_like.html#torch.randint_like
+ 178. file:///tmp/lynxXXXXImBBjn/generated/torch.randperm.html#torch.randperm
+ 179. file:///tmp/lynxXXXXImBBjn/generated/torch.empty.html#torch.empty
+ 180. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#inplace-random-sampling
+ 181. file:///tmp/lynxXXXXImBBjn/tensors.html#torch.Tensor
+ 182. file:///tmp/lynxXXXXImBBjn/generated/torch.tensor.html#torch.tensor
+ 183. file:///tmp/lynxXXXXImBBjn/notes/autograd.html
+ 184. file:///tmp/lynxXXXXImBBjn/generated/torch.sparse_coo_tensor.html#torch.sparse_coo_tensor
+ 185. file:///tmp/lynxXXXXImBBjn/sparse.html#sparse-coo-docs
+ 186. file:///tmp/lynxXXXXImBBjn/generated/torch.sparse_csr_tensor.html#torch.sparse_csr_tensor
+ 187. file:///tmp/lynxXXXXImBBjn/sparse.html#sparse-csr-docs
+ 188. file:///tmp/lynxXXXXImBBjn/generated/torch.sparse_csc_tensor.html#torch.sparse_csc_tensor
+ 189. file:///tmp/lynxXXXXImBBjn/sparse.html#sparse-csc-docs
+ 190. file:///tmp/lynxXXXXImBBjn/generated/torch.sparse_bsr_tensor.html#torch.sparse_bsr_tensor
+ 191. file:///tmp/lynxXXXXImBBjn/sparse.html#sparse-bsr-docs
+ 192. file:///tmp/lynxXXXXImBBjn/generated/torch.sparse_bsc_tensor.html#torch.sparse_bsc_tensor
+ 193. file:///tmp/lynxXXXXImBBjn/sparse.html#sparse-bsc-docs
+ 194. file:///tmp/lynxXXXXImBBjn/generated/torch.asarray.html#torch.asarray
+ 195. file:///tmp/lynxXXXXImBBjn/generated/torch.as_tensor.html#torch.as_tensor
+ 196. file:///tmp/lynxXXXXImBBjn/generated/torch.as_strided.html#torch.as_strided
+ 197. file:///tmp/lynxXXXXImBBjn/generated/torch.from_file.html#torch.from_file
+ 198. file:///tmp/lynxXXXXImBBjn/generated/torch.from_numpy.html#torch.from_numpy
+ 199. file:///tmp/lynxXXXXImBBjn/tensors.html#torch.Tensor
+ 200. https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray
+ 201. file:///tmp/lynxXXXXImBBjn/generated/torch.from_dlpack.html#torch.from_dlpack
+ 202. file:///tmp/lynxXXXXImBBjn/generated/torch.frombuffer.html#torch.frombuffer
+ 203. file:///tmp/lynxXXXXImBBjn/tensors.html#torch.Tensor
+ 204. file:///tmp/lynxXXXXImBBjn/generated/torch.zeros.html#torch.zeros
+ 205. file:///tmp/lynxXXXXImBBjn/generated/torch.zeros_like.html#torch.zeros_like
+ 206. file:///tmp/lynxXXXXImBBjn/generated/torch.ones.html#torch.ones
+ 207. file:///tmp/lynxXXXXImBBjn/generated/torch.ones_like.html#torch.ones_like
+ 208. file:///tmp/lynxXXXXImBBjn/generated/torch.arange.html#torch.arange
+ 209. file:///tmp/lynxXXXXImBBjn/generated/torch.range.html#torch.range
+ 210. file:///tmp/lynxXXXXImBBjn/generated/torch.linspace.html#torch.linspace
+ 211. file:///tmp/lynxXXXXImBBjn/generated/torch.logspace.html#torch.logspace
+ 212. file:///tmp/lynxXXXXImBBjn/generated/torch.eye.html#torch.eye
+ 213. file:///tmp/lynxXXXXImBBjn/generated/torch.empty.html#torch.empty
+ 214. file:///tmp/lynxXXXXImBBjn/generated/torch.empty_like.html#torch.empty_like
+ 215. file:///tmp/lynxXXXXImBBjn/generated/torch.empty_strided.html#torch.empty_strided
+ 216. file:///tmp/lynxXXXXImBBjn/generated/torch.full.html#torch.full
+ 217. file:///tmp/lynxXXXXImBBjn/generated/torch.full_like.html#torch.full_like
+ 218. file:///tmp/lynxXXXXImBBjn/generated/torch.quantize_per_tensor.html#torch.quantize_per_tensor
+ 219. file:///tmp/lynxXXXXImBBjn/generated/torch.quantize_per_channel.html#torch.quantize_per_channel
+ 220. file:///tmp/lynxXXXXImBBjn/generated/torch.dequantize.html#torch.dequantize
+ 221. file:///tmp/lynxXXXXImBBjn/generated/torch.complex.html#torch.complex
+ 222. file:///tmp/lynxXXXXImBBjn/generated/torch.real.html#torch.real
+ 223. file:///tmp/lynxXXXXImBBjn/generated/torch.imag.html#torch.imag
+ 224. file:///tmp/lynxXXXXImBBjn/generated/torch.polar.html#torch.polar
+ 225. file:///tmp/lynxXXXXImBBjn/generated/torch.abs.html#torch.abs
+ 226. file:///tmp/lynxXXXXImBBjn/generated/torch.angle.html#torch.angle
+ 227. file:///tmp/lynxXXXXImBBjn/generated/torch.heaviside.html#torch.heaviside
+ 228. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#indexing-slicing-joining-mutating-ops
+ 229. file:///tmp/lynxXXXXImBBjn/generated/torch.adjoint.html#torch.adjoint
+ 230. file:///tmp/lynxXXXXImBBjn/generated/torch.argwhere.html#torch.argwhere
+ 231. file:///tmp/lynxXXXXImBBjn/generated/torch.cat.html#torch.cat
+ 232. file:///tmp/lynxXXXXImBBjn/generated/torch.concat.html#torch.concat
+ 233. file:///tmp/lynxXXXXImBBjn/generated/torch.cat.html#torch.cat
+ 234. file:///tmp/lynxXXXXImBBjn/generated/torch.concatenate.html#torch.concatenate
+ 235. file:///tmp/lynxXXXXImBBjn/generated/torch.cat.html#torch.cat
+ 236. file:///tmp/lynxXXXXImBBjn/generated/torch.conj.html#torch.conj
+ 237. file:///tmp/lynxXXXXImBBjn/generated/torch.chunk.html#torch.chunk
+ 238. file:///tmp/lynxXXXXImBBjn/generated/torch.dsplit.html#torch.dsplit
+ 239. file:///tmp/lynxXXXXImBBjn/generated/torch.column_stack.html#torch.column_stack
+ 240. file:///tmp/lynxXXXXImBBjn/generated/torch.dstack.html#torch.dstack
+ 241. file:///tmp/lynxXXXXImBBjn/generated/torch.gather.html#torch.gather
+ 242. file:///tmp/lynxXXXXImBBjn/generated/torch.hsplit.html#torch.hsplit
+ 243. file:///tmp/lynxXXXXImBBjn/generated/torch.hstack.html#torch.hstack
+ 244. file:///tmp/lynxXXXXImBBjn/generated/torch.index_add.html#torch.index_add
+ 245. file:///tmp/lynxXXXXImBBjn/generated/torch.Tensor.index_add_.html#torch.Tensor.index_add_
+ 246. file:///tmp/lynxXXXXImBBjn/generated/torch.index_copy.html#torch.index_copy
+ 247. file:///tmp/lynxXXXXImBBjn/generated/torch.Tensor.index_add_.html#torch.Tensor.index_add_
+ 248. file:///tmp/lynxXXXXImBBjn/generated/torch.index_reduce.html#torch.index_reduce
+ 249. file:///tmp/lynxXXXXImBBjn/generated/torch.Tensor.index_reduce_.html#torch.Tensor.index_reduce_
+ 250. file:///tmp/lynxXXXXImBBjn/generated/torch.index_select.html#torch.index_select
+ 251. file:///tmp/lynxXXXXImBBjn/generated/torch.masked_select.html#torch.masked_select
+ 252. file:///tmp/lynxXXXXImBBjn/generated/torch.movedim.html#torch.movedim
+ 253. file:///tmp/lynxXXXXImBBjn/generated/torch.moveaxis.html#torch.moveaxis
+ 254. file:///tmp/lynxXXXXImBBjn/generated/torch.movedim.html#torch.movedim
+ 255. file:///tmp/lynxXXXXImBBjn/generated/torch.narrow.html#torch.narrow
+ 256. file:///tmp/lynxXXXXImBBjn/generated/torch.narrow_copy.html#torch.narrow_copy
+ 257. file:///tmp/lynxXXXXImBBjn/generated/torch.Tensor.narrow.html#torch.Tensor.narrow
+ 258. file:///tmp/lynxXXXXImBBjn/generated/torch.nonzero.html#torch.nonzero
+ 259. file:///tmp/lynxXXXXImBBjn/generated/torch.permute.html#torch.permute
+ 260. file:///tmp/lynxXXXXImBBjn/generated/torch.reshape.html#torch.reshape
+ 261. file:///tmp/lynxXXXXImBBjn/generated/torch.row_stack.html#torch.row_stack
+ 262. file:///tmp/lynxXXXXImBBjn/generated/torch.vstack.html#torch.vstack
+ 263. file:///tmp/lynxXXXXImBBjn/generated/torch.select.html#torch.select
+ 264. file:///tmp/lynxXXXXImBBjn/generated/torch.scatter.html#torch.scatter
+ 265. file:///tmp/lynxXXXXImBBjn/generated/torch.Tensor.scatter_.html#torch.Tensor.scatter_
+ 266. file:///tmp/lynxXXXXImBBjn/generated/torch.diagonal_scatter.html#torch.diagonal_scatter
+ 267. file:///tmp/lynxXXXXImBBjn/generated/torch.select_scatter.html#torch.select_scatter
+ 268. file:///tmp/lynxXXXXImBBjn/generated/torch.slice_scatter.html#torch.slice_scatter
+ 269. file:///tmp/lynxXXXXImBBjn/generated/torch.scatter_add.html#torch.scatter_add
+ 270. file:///tmp/lynxXXXXImBBjn/generated/torch.Tensor.scatter_add_.html#torch.Tensor.scatter_add_
+ 271. file:///tmp/lynxXXXXImBBjn/generated/torch.scatter_reduce.html#torch.scatter_reduce
+ 272. file:///tmp/lynxXXXXImBBjn/generated/torch.Tensor.scatter_reduce_.html#torch.Tensor.scatter_reduce_
+ 273. file:///tmp/lynxXXXXImBBjn/generated/torch.split.html#torch.split
+ 274. file:///tmp/lynxXXXXImBBjn/generated/torch.squeeze.html#torch.squeeze
+ 275. file:///tmp/lynxXXXXImBBjn/generated/torch.stack.html#torch.stack
+ 276. file:///tmp/lynxXXXXImBBjn/generated/torch.swapaxes.html#torch.swapaxes
+ 277. file:///tmp/lynxXXXXImBBjn/generated/torch.transpose.html#torch.transpose
+ 278. file:///tmp/lynxXXXXImBBjn/generated/torch.swapdims.html#torch.swapdims
+ 279. file:///tmp/lynxXXXXImBBjn/generated/torch.transpose.html#torch.transpose
+ 280. file:///tmp/lynxXXXXImBBjn/generated/torch.t.html#torch.t
+ 281. file:///tmp/lynxXXXXImBBjn/generated/torch.take.html#torch.take
+ 282. file:///tmp/lynxXXXXImBBjn/generated/torch.take_along_dim.html#torch.take_along_dim
+ 283. file:///tmp/lynxXXXXImBBjn/generated/torch.tensor_split.html#torch.tensor_split
+ 284. file:///tmp/lynxXXXXImBBjn/generated/torch.tile.html#torch.tile
+ 285. file:///tmp/lynxXXXXImBBjn/generated/torch.transpose.html#torch.transpose
+ 286. file:///tmp/lynxXXXXImBBjn/generated/torch.unbind.html#torch.unbind
+ 287. file:///tmp/lynxXXXXImBBjn/generated/torch.unravel_index.html#torch.unravel_index
+ 288. file:///tmp/lynxXXXXImBBjn/generated/torch.unsqueeze.html#torch.unsqueeze
+ 289. file:///tmp/lynxXXXXImBBjn/generated/torch.vsplit.html#torch.vsplit
+ 290. file:///tmp/lynxXXXXImBBjn/generated/torch.vstack.html#torch.vstack
+ 291. file:///tmp/lynxXXXXImBBjn/generated/torch.where.html#torch.where
+ 292. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#accelerators
+ 293. file:///tmp/lynxXXXXImBBjn/tensor_attributes.html#torch.device
+ 294. file:///tmp/lynxXXXXImBBjn/generated/torch.Stream.html#torch.Stream
+ 295. file:///tmp/lynxXXXXImBBjn/generated/torch.Event.html#torch.Event
+ 296. file:///tmp/lynxXXXXImBBjn/cuda.html
+ 297. file:///tmp/lynxXXXXImBBjn/mtia.html
+ 298. file:///tmp/lynxXXXXImBBjn/xpu.html
+ 299. file:///tmp/lynxXXXXImBBjn/generated/torch.Stream.html#torch.Stream
+ 300. file:///tmp/lynxXXXXImBBjn/generated/torch.Event.html#torch.Event
+ 301. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#generators
+ 302. file:///tmp/lynxXXXXImBBjn/generated/torch.Generator.html#torch.Generator
+ 303. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#random-sampling
+ 304. file:///tmp/lynxXXXXImBBjn/generated/torch.seed.html#torch.seed
+ 305. file:///tmp/lynxXXXXImBBjn/generated/torch.manual_seed.html#torch.manual_seed
+ 306. file:///tmp/lynxXXXXImBBjn/generated/torch.initial_seed.html#torch.initial_seed
+ 307. file:///tmp/lynxXXXXImBBjn/generated/torch.get_rng_state.html#torch.get_rng_state
+ 308. file:///tmp/lynxXXXXImBBjn/generated/torch.set_rng_state.html#torch.set_rng_state
+ 309. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.torch.default_generator
+ 310. file:///tmp/lynxXXXXImBBjn/generated/torch.bernoulli.html#torch.bernoulli
+ 311. file:///tmp/lynxXXXXImBBjn/generated/torch.multinomial.html#torch.multinomial
+ 312. file:///tmp/lynxXXXXImBBjn/distributions.html#torch.distributions.multinomial.Multinomial
+ 313. file:///tmp/lynxXXXXImBBjn/generated/torch.normal.html#torch.normal
+ 314. file:///tmp/lynxXXXXImBBjn/generated/torch.poisson.html#torch.poisson
+ 315. file:///tmp/lynxXXXXImBBjn/generated/torch.rand.html#torch.rand
+ 316. file:///tmp/lynxXXXXImBBjn/generated/torch.rand_like.html#torch.rand_like
+ 317. file:///tmp/lynxXXXXImBBjn/generated/torch.randint.html#torch.randint
+ 318. file:///tmp/lynxXXXXImBBjn/generated/torch.randint_like.html#torch.randint_like
+ 319. file:///tmp/lynxXXXXImBBjn/generated/torch.randn.html#torch.randn
+ 320. file:///tmp/lynxXXXXImBBjn/generated/torch.randn_like.html#torch.randn_like
+ 321. file:///tmp/lynxXXXXImBBjn/generated/torch.randperm.html#torch.randperm
+ 322. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#in-place-random-sampling
+ 323. file:///tmp/lynxXXXXImBBjn/generated/torch.Tensor.bernoulli_.html#torch.Tensor.bernoulli_
+ 324. file:///tmp/lynxXXXXImBBjn/generated/torch.bernoulli.html#torch.bernoulli
+ 325. file:///tmp/lynxXXXXImBBjn/generated/torch.Tensor.cauchy_.html#torch.Tensor.cauchy_
+ 326. file:///tmp/lynxXXXXImBBjn/generated/torch.Tensor.exponential_.html#torch.Tensor.exponential_
+ 327. file:///tmp/lynxXXXXImBBjn/generated/torch.Tensor.geometric_.html#torch.Tensor.geometric_
+ 328. file:///tmp/lynxXXXXImBBjn/generated/torch.Tensor.log_normal_.html#torch.Tensor.log_normal_
+ 329. file:///tmp/lynxXXXXImBBjn/generated/torch.Tensor.normal_.html#torch.Tensor.normal_
+ 330. file:///tmp/lynxXXXXImBBjn/generated/torch.normal.html#torch.normal
+ 331. file:///tmp/lynxXXXXImBBjn/generated/torch.Tensor.random_.html#torch.Tensor.random_
+ 332. file:///tmp/lynxXXXXImBBjn/generated/torch.Tensor.uniform_.html#torch.Tensor.uniform_
+ 333. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#quasi-random-sampling
+ 334. file:///tmp/lynxXXXXImBBjn/generated/torch.quasirandom.SobolEngine.html#torch.quasirandom.SobolEngine
+ 335. file:///tmp/lynxXXXXImBBjn/generated/torch.quasirandom.SobolEngine.html#torch.quasirandom.SobolEngine
+ 336. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#serialization
+ 337. file:///tmp/lynxXXXXImBBjn/generated/torch.save.html#torch.save
+ 338. file:///tmp/lynxXXXXImBBjn/generated/torch.load.html#torch.load
+ 339. file:///tmp/lynxXXXXImBBjn/generated/torch.save.html#torch.save
+ 340. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#parallelism
+ 341. file:///tmp/lynxXXXXImBBjn/generated/torch.get_num_threads.html#torch.get_num_threads
+ 342. file:///tmp/lynxXXXXImBBjn/generated/torch.set_num_threads.html#torch.set_num_threads
+ 343. file:///tmp/lynxXXXXImBBjn/generated/torch.get_num_interop_threads.html#torch.get_num_interop_threads
+ 344. file:///tmp/lynxXXXXImBBjn/generated/torch.set_num_interop_threads.html#torch.set_num_interop_threads
+ 345. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#locally-disabling-gradient-computation
+ 346. file:///tmp/lynxXXXXImBBjn/generated/torch.no_grad.html#torch.no_grad
+ 347. file:///tmp/lynxXXXXImBBjn/generated/torch.enable_grad.html#torch.enable_grad
+ 348. file:///tmp/lynxXXXXImBBjn/autograd.html#locally-disable-grad
+ 349. file:///tmp/lynxXXXXImBBjn/generated/torch.no_grad.html#torch.no_grad
+ 350. file:///tmp/lynxXXXXImBBjn/generated/torch.enable_grad.html#torch.enable_grad
+ 351. file:///tmp/lynxXXXXImBBjn/generated/torch.autograd.grad_mode.set_grad_enabled.html#torch.autograd.grad_mode.set_grad_enabled
+ 352. file:///tmp/lynxXXXXImBBjn/generated/torch.is_grad_enabled.html#torch.is_grad_enabled
+ 353. file:///tmp/lynxXXXXImBBjn/generated/torch.autograd.grad_mode.inference_mode.html#torch.autograd.grad_mode.inference_mode
+ 354. file:///tmp/lynxXXXXImBBjn/generated/torch.is_inference_mode_enabled.html#torch.is_inference_mode_enabled
+ 355. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#math-operations
+ 356. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#constants
+ 357. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#pointwise-ops
+ 358. file:///tmp/lynxXXXXImBBjn/generated/torch.abs.html#torch.abs
+ 359. file:///tmp/lynxXXXXImBBjn/generated/torch.absolute.html#torch.absolute
+ 360. file:///tmp/lynxXXXXImBBjn/generated/torch.abs.html#torch.abs
+ 361. file:///tmp/lynxXXXXImBBjn/generated/torch.acos.html#torch.acos
+ 362. file:///tmp/lynxXXXXImBBjn/generated/torch.arccos.html#torch.arccos
+ 363. file:///tmp/lynxXXXXImBBjn/generated/torch.acos.html#torch.acos
+ 364. file:///tmp/lynxXXXXImBBjn/generated/torch.acosh.html#torch.acosh
+ 365. file:///tmp/lynxXXXXImBBjn/generated/torch.arccosh.html#torch.arccosh
+ 366. file:///tmp/lynxXXXXImBBjn/generated/torch.acosh.html#torch.acosh
+ 367. file:///tmp/lynxXXXXImBBjn/generated/torch.add.html#torch.add
+ 368. file:///tmp/lynxXXXXImBBjn/generated/torch.addcdiv.html#torch.addcdiv
+ 369. file:///tmp/lynxXXXXImBBjn/generated/torch.addcmul.html#torch.addcmul
+ 370. file:///tmp/lynxXXXXImBBjn/generated/torch.angle.html#torch.angle
+ 371. file:///tmp/lynxXXXXImBBjn/generated/torch.asin.html#torch.asin
+ 372. file:///tmp/lynxXXXXImBBjn/generated/torch.arcsin.html#torch.arcsin
+ 373. file:///tmp/lynxXXXXImBBjn/generated/torch.asin.html#torch.asin
+ 374. file:///tmp/lynxXXXXImBBjn/generated/torch.asinh.html#torch.asinh
+ 375. file:///tmp/lynxXXXXImBBjn/generated/torch.arcsinh.html#torch.arcsinh
+ 376. file:///tmp/lynxXXXXImBBjn/generated/torch.asinh.html#torch.asinh
+ 377. file:///tmp/lynxXXXXImBBjn/generated/torch.atan.html#torch.atan
+ 378. file:///tmp/lynxXXXXImBBjn/generated/torch.arctan.html#torch.arctan
+ 379. file:///tmp/lynxXXXXImBBjn/generated/torch.atan.html#torch.atan
+ 380. file:///tmp/lynxXXXXImBBjn/generated/torch.atanh.html#torch.atanh
+ 381. file:///tmp/lynxXXXXImBBjn/generated/torch.arctanh.html#torch.arctanh
+ 382. file:///tmp/lynxXXXXImBBjn/generated/torch.atanh.html#torch.atanh
+ 383. file:///tmp/lynxXXXXImBBjn/generated/torch.atan2.html#torch.atan2
+ 384. file:///tmp/lynxXXXXImBBjn/generated/torch.arctan2.html#torch.arctan2
+ 385. file:///tmp/lynxXXXXImBBjn/generated/torch.atan2.html#torch.atan2
+ 386. file:///tmp/lynxXXXXImBBjn/generated/torch.bitwise_not.html#torch.bitwise_not
+ 387. file:///tmp/lynxXXXXImBBjn/generated/torch.bitwise_and.html#torch.bitwise_and
+ 388. file:///tmp/lynxXXXXImBBjn/generated/torch.bitwise_or.html#torch.bitwise_or
+ 389. file:///tmp/lynxXXXXImBBjn/generated/torch.bitwise_xor.html#torch.bitwise_xor
+ 390. file:///tmp/lynxXXXXImBBjn/generated/torch.bitwise_left_shift.html#torch.bitwise_left_shift
+ 391. file:///tmp/lynxXXXXImBBjn/generated/torch.bitwise_right_shift.html#torch.bitwise_right_shift
+ 392. file:///tmp/lynxXXXXImBBjn/generated/torch.ceil.html#torch.ceil
+ 393. file:///tmp/lynxXXXXImBBjn/generated/torch.clamp.html#torch.clamp
+ 394. file:///tmp/lynxXXXXImBBjn/generated/torch.min.html#torch.min
+ 395. file:///tmp/lynxXXXXImBBjn/generated/torch.max.html#torch.max
+ 396. file:///tmp/lynxXXXXImBBjn/generated/torch.clip.html#torch.clip
+ 397. file:///tmp/lynxXXXXImBBjn/generated/torch.clamp.html#torch.clamp
+ 398. file:///tmp/lynxXXXXImBBjn/generated/torch.conj_physical.html#torch.conj_physical
+ 399. file:///tmp/lynxXXXXImBBjn/generated/torch.copysign.html#torch.copysign
+ 400. file:///tmp/lynxXXXXImBBjn/generated/torch.cos.html#torch.cos
+ 401. file:///tmp/lynxXXXXImBBjn/generated/torch.cosh.html#torch.cosh
+ 402. file:///tmp/lynxXXXXImBBjn/generated/torch.deg2rad.html#torch.deg2rad
+ 403. file:///tmp/lynxXXXXImBBjn/generated/torch.div.html#torch.div
+ 404. file:///tmp/lynxXXXXImBBjn/generated/torch.divide.html#torch.divide
+ 405. file:///tmp/lynxXXXXImBBjn/generated/torch.div.html#torch.div
+ 406. file:///tmp/lynxXXXXImBBjn/generated/torch.digamma.html#torch.digamma
+ 407. file:///tmp/lynxXXXXImBBjn/special.html#torch.special.digamma
+ 408. file:///tmp/lynxXXXXImBBjn/generated/torch.erf.html#torch.erf
+ 409. file:///tmp/lynxXXXXImBBjn/special.html#torch.special.erf
+ 410. file:///tmp/lynxXXXXImBBjn/generated/torch.erfc.html#torch.erfc
+ 411. file:///tmp/lynxXXXXImBBjn/special.html#torch.special.erfc
+ 412. file:///tmp/lynxXXXXImBBjn/generated/torch.erfinv.html#torch.erfinv
+ 413. file:///tmp/lynxXXXXImBBjn/special.html#torch.special.erfinv
+ 414. file:///tmp/lynxXXXXImBBjn/generated/torch.exp.html#torch.exp
+ 415. file:///tmp/lynxXXXXImBBjn/generated/torch.exp2.html#torch.exp2
+ 416. file:///tmp/lynxXXXXImBBjn/special.html#torch.special.exp2
+ 417. file:///tmp/lynxXXXXImBBjn/generated/torch.expm1.html#torch.expm1
+ 418. file:///tmp/lynxXXXXImBBjn/special.html#torch.special.expm1
+ 419. file:///tmp/lynxXXXXImBBjn/generated/torch.fake_quantize_per_channel_affine.html#torch.fake_quantize_per_channel_affine
+ 420. file:///tmp/lynxXXXXImBBjn/generated/torch.fake_quantize_per_tensor_affine.html#torch.fake_quantize_per_tensor_affine
+ 421. file:///tmp/lynxXXXXImBBjn/generated/torch.fix.html#torch.fix
+ 422. file:///tmp/lynxXXXXImBBjn/generated/torch.trunc.html#torch.trunc
+ 423. file:///tmp/lynxXXXXImBBjn/generated/torch.float_power.html#torch.float_power
+ 424. file:///tmp/lynxXXXXImBBjn/generated/torch.floor.html#torch.floor
+ 425. file:///tmp/lynxXXXXImBBjn/generated/torch.floor_divide.html#torch.floor_divide
+ 426. file:///tmp/lynxXXXXImBBjn/generated/torch.fmod.html#torch.fmod
+ 427. https://en.cppreference.com/w/cpp/numeric/math/fmod
+ 428. file:///tmp/lynxXXXXImBBjn/generated/torch.frac.html#torch.frac
+ 429. file:///tmp/lynxXXXXImBBjn/generated/torch.frexp.html#torch.frexp
+ 430. file:///tmp/lynxXXXXImBBjn/generated/torch.gradient.html#torch.gradient
+ 431. https://www.ams.org/journals/mcom/1988-51-184/S0025-5718-1988-0935077-0/S0025-5718-1988-0935077-0.pdf
+ 432. file:///tmp/lynxXXXXImBBjn/generated/torch.imag.html#torch.imag
+ 433. file:///tmp/lynxXXXXImBBjn/generated/torch.ldexp.html#torch.ldexp
+ 434. file:///tmp/lynxXXXXImBBjn/generated/torch.lerp.html#torch.lerp
+ 435. file:///tmp/lynxXXXXImBBjn/generated/torch.lgamma.html#torch.lgamma
+ 436. file:///tmp/lynxXXXXImBBjn/generated/torch.log.html#torch.log
+ 437. file:///tmp/lynxXXXXImBBjn/generated/torch.log10.html#torch.log10
+ 438. file:///tmp/lynxXXXXImBBjn/generated/torch.log1p.html#torch.log1p
+ 439. file:///tmp/lynxXXXXImBBjn/generated/torch.log2.html#torch.log2
+ 440. file:///tmp/lynxXXXXImBBjn/generated/torch.logaddexp.html#torch.logaddexp
+ 441. file:///tmp/lynxXXXXImBBjn/generated/torch.logaddexp2.html#torch.logaddexp2
+ 442. file:///tmp/lynxXXXXImBBjn/generated/torch.logical_and.html#torch.logical_and
+ 443. file:///tmp/lynxXXXXImBBjn/generated/torch.logical_not.html#torch.logical_not
+ 444. file:///tmp/lynxXXXXImBBjn/generated/torch.logical_or.html#torch.logical_or
+ 445. file:///tmp/lynxXXXXImBBjn/generated/torch.logical_xor.html#torch.logical_xor
+ 446. file:///tmp/lynxXXXXImBBjn/generated/torch.logit.html#torch.logit
+ 447. file:///tmp/lynxXXXXImBBjn/special.html#torch.special.logit
+ 448. file:///tmp/lynxXXXXImBBjn/generated/torch.hypot.html#torch.hypot
+ 449. file:///tmp/lynxXXXXImBBjn/generated/torch.i0.html#torch.i0
+ 450. file:///tmp/lynxXXXXImBBjn/special.html#torch.special.i0
+ 451. file:///tmp/lynxXXXXImBBjn/generated/torch.igamma.html#torch.igamma
+ 452. file:///tmp/lynxXXXXImBBjn/special.html#torch.special.gammainc
+ 453. file:///tmp/lynxXXXXImBBjn/generated/torch.igammac.html#torch.igammac
+ 454. file:///tmp/lynxXXXXImBBjn/special.html#torch.special.gammaincc
+ 455. file:///tmp/lynxXXXXImBBjn/generated/torch.mul.html#torch.mul
+ 456. file:///tmp/lynxXXXXImBBjn/generated/torch.multiply.html#torch.multiply
+ 457. file:///tmp/lynxXXXXImBBjn/generated/torch.mul.html#torch.mul
+ 458. file:///tmp/lynxXXXXImBBjn/generated/torch.mvlgamma.html#torch.mvlgamma
+ 459. file:///tmp/lynxXXXXImBBjn/special.html#torch.special.multigammaln
+ 460. file:///tmp/lynxXXXXImBBjn/generated/torch.nan_to_num.html#torch.nan_to_num
+ 461. file:///tmp/lynxXXXXImBBjn/generated/torch.neg.html#torch.neg
+ 462. file:///tmp/lynxXXXXImBBjn/generated/torch.negative.html#torch.negative
+ 463. file:///tmp/lynxXXXXImBBjn/generated/torch.neg.html#torch.neg
+ 464. file:///tmp/lynxXXXXImBBjn/generated/torch.nextafter.html#torch.nextafter
+ 465. file:///tmp/lynxXXXXImBBjn/generated/torch.polygamma.html#torch.polygamma
+ 466. file:///tmp/lynxXXXXImBBjn/special.html#torch.special.polygamma
+ 467. file:///tmp/lynxXXXXImBBjn/generated/torch.positive.html#torch.positive
+ 468. file:///tmp/lynxXXXXImBBjn/generated/torch.pow.html#torch.pow
+ 469. file:///tmp/lynxXXXXImBBjn/generated/torch.quantized_batch_norm.html#torch.quantized_batch_norm
+ 470. file:///tmp/lynxXXXXImBBjn/generated/torch.quantized_max_pool1d.html#torch.quantized_max_pool1d
+ 471. file:///tmp/lynxXXXXImBBjn/generated/torch.quantized_max_pool2d.html#torch.quantized_max_pool2d
+ 472. file:///tmp/lynxXXXXImBBjn/generated/torch.rad2deg.html#torch.rad2deg
+ 473. file:///tmp/lynxXXXXImBBjn/generated/torch.real.html#torch.real
+ 474. file:///tmp/lynxXXXXImBBjn/generated/torch.reciprocal.html#torch.reciprocal
+ 475. file:///tmp/lynxXXXXImBBjn/generated/torch.remainder.html#torch.remainder
+ 476. https://docs.python.org/3/reference/expressions.html#binary-arithmetic-operations
+ 477. file:///tmp/lynxXXXXImBBjn/generated/torch.round.html#torch.round
+ 478. file:///tmp/lynxXXXXImBBjn/generated/torch.rsqrt.html#torch.rsqrt
+ 479. file:///tmp/lynxXXXXImBBjn/generated/torch.sigmoid.html#torch.sigmoid
+ 480. file:///tmp/lynxXXXXImBBjn/special.html#torch.special.expit
+ 481. file:///tmp/lynxXXXXImBBjn/generated/torch.sign.html#torch.sign
+ 482. file:///tmp/lynxXXXXImBBjn/generated/torch.sgn.html#torch.sgn
+ 483. file:///tmp/lynxXXXXImBBjn/generated/torch.signbit.html#torch.signbit
+ 484. file:///tmp/lynxXXXXImBBjn/generated/torch.sin.html#torch.sin
+ 485. file:///tmp/lynxXXXXImBBjn/generated/torch.sinc.html#torch.sinc
+ 486. file:///tmp/lynxXXXXImBBjn/special.html#torch.special.sinc
+ 487. file:///tmp/lynxXXXXImBBjn/generated/torch.sinh.html#torch.sinh
+ 488. file:///tmp/lynxXXXXImBBjn/generated/torch.softmax.html#torch.softmax
+ 489. file:///tmp/lynxXXXXImBBjn/generated/torch.nn.functional.softmax.html#torch.nn.functional.softmax
+ 490. file:///tmp/lynxXXXXImBBjn/generated/torch.sqrt.html#torch.sqrt
+ 491. file:///tmp/lynxXXXXImBBjn/generated/torch.square.html#torch.square
+ 492. file:///tmp/lynxXXXXImBBjn/generated/torch.sub.html#torch.sub
+ 493. file:///tmp/lynxXXXXImBBjn/generated/torch.subtract.html#torch.subtract
+ 494. file:///tmp/lynxXXXXImBBjn/generated/torch.sub.html#torch.sub
+ 495. file:///tmp/lynxXXXXImBBjn/generated/torch.tan.html#torch.tan
+ 496. file:///tmp/lynxXXXXImBBjn/generated/torch.tanh.html#torch.tanh
+ 497. file:///tmp/lynxXXXXImBBjn/generated/torch.true_divide.html#torch.true_divide
+ 498. file:///tmp/lynxXXXXImBBjn/generated/torch.div.html#torch.div
+ 499. file:///tmp/lynxXXXXImBBjn/generated/torch.trunc.html#torch.trunc
+ 500. file:///tmp/lynxXXXXImBBjn/generated/torch.xlogy.html#torch.xlogy
+ 501. file:///tmp/lynxXXXXImBBjn/special.html#torch.special.xlogy
+ 502. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#reduction-ops
+ 503. file:///tmp/lynxXXXXImBBjn/generated/torch.argmax.html#torch.argmax
+ 504. file:///tmp/lynxXXXXImBBjn/generated/torch.argmin.html#torch.argmin
+ 505. file:///tmp/lynxXXXXImBBjn/generated/torch.amax.html#torch.amax
+ 506. file:///tmp/lynxXXXXImBBjn/generated/torch.amin.html#torch.amin
+ 507. file:///tmp/lynxXXXXImBBjn/generated/torch.aminmax.html#torch.aminmax
+ 508. file:///tmp/lynxXXXXImBBjn/generated/torch.all.html#torch.all
+ 509. file:///tmp/lynxXXXXImBBjn/generated/torch.any.html#torch.any
+ 510. file:///tmp/lynxXXXXImBBjn/generated/torch.max.html#torch.max
+ 511. file:///tmp/lynxXXXXImBBjn/generated/torch.min.html#torch.min
+ 512. file:///tmp/lynxXXXXImBBjn/generated/torch.dist.html#torch.dist
+ 513. file:///tmp/lynxXXXXImBBjn/generated/torch.logsumexp.html#torch.logsumexp
+ 514. file:///tmp/lynxXXXXImBBjn/generated/torch.mean.html#torch.mean
+ 515. file:///tmp/lynxXXXXImBBjn/generated/torch.nanmean.html#torch.nanmean
+ 516. file:///tmp/lynxXXXXImBBjn/generated/torch.median.html#torch.median
+ 517. file:///tmp/lynxXXXXImBBjn/generated/torch.nanmedian.html#torch.nanmedian
+ 518. file:///tmp/lynxXXXXImBBjn/generated/torch.mode.html#torch.mode
+ 519. file:///tmp/lynxXXXXImBBjn/generated/torch.norm.html#torch.norm
+ 520. file:///tmp/lynxXXXXImBBjn/generated/torch.nansum.html#torch.nansum
+ 521. file:///tmp/lynxXXXXImBBjn/generated/torch.prod.html#torch.prod
+ 522. file:///tmp/lynxXXXXImBBjn/generated/torch.quantile.html#torch.quantile
+ 523. file:///tmp/lynxXXXXImBBjn/generated/torch.nanquantile.html#torch.nanquantile
+ 524. file:///tmp/lynxXXXXImBBjn/generated/torch.quantile.html#torch.quantile
+ 525. file:///tmp/lynxXXXXImBBjn/generated/torch.std.html#torch.std
+ 526. file:///tmp/lynxXXXXImBBjn/generated/torch.std_mean.html#torch.std_mean
+ 527. file:///tmp/lynxXXXXImBBjn/generated/torch.sum.html#torch.sum
+ 528. file:///tmp/lynxXXXXImBBjn/generated/torch.unique.html#torch.unique
+ 529. file:///tmp/lynxXXXXImBBjn/generated/torch.unique_consecutive.html#torch.unique_consecutive
+ 530. file:///tmp/lynxXXXXImBBjn/generated/torch.var.html#torch.var
+ 531. file:///tmp/lynxXXXXImBBjn/generated/torch.var_mean.html#torch.var_mean
+ 532. file:///tmp/lynxXXXXImBBjn/generated/torch.count_nonzero.html#torch.count_nonzero
+ 533. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#comparison-ops
+ 534. file:///tmp/lynxXXXXImBBjn/generated/torch.allclose.html#torch.allclose
+ 535. file:///tmp/lynxXXXXImBBjn/generated/torch.argsort.html#torch.argsort
+ 536. file:///tmp/lynxXXXXImBBjn/generated/torch.eq.html#torch.eq
+ 537. file:///tmp/lynxXXXXImBBjn/generated/torch.equal.html#torch.equal
+ 538. file:///tmp/lynxXXXXImBBjn/generated/torch.ge.html#torch.ge
+ 539. file:///tmp/lynxXXXXImBBjn/generated/torch.greater_equal.html#torch.greater_equal
+ 540. file:///tmp/lynxXXXXImBBjn/generated/torch.ge.html#torch.ge
+ 541. file:///tmp/lynxXXXXImBBjn/generated/torch.gt.html#torch.gt
+ 542. file:///tmp/lynxXXXXImBBjn/generated/torch.greater.html#torch.greater
+ 543. file:///tmp/lynxXXXXImBBjn/generated/torch.gt.html#torch.gt
+ 544. file:///tmp/lynxXXXXImBBjn/generated/torch.isclose.html#torch.isclose
+ 545. file:///tmp/lynxXXXXImBBjn/generated/torch.isfinite.html#torch.isfinite
+ 546. file:///tmp/lynxXXXXImBBjn/generated/torch.isin.html#torch.isin
+ 547. file:///tmp/lynxXXXXImBBjn/generated/torch.isinf.html#torch.isinf
+ 548. file:///tmp/lynxXXXXImBBjn/generated/torch.isposinf.html#torch.isposinf
+ 549. file:///tmp/lynxXXXXImBBjn/generated/torch.isneginf.html#torch.isneginf
+ 550. file:///tmp/lynxXXXXImBBjn/generated/torch.isnan.html#torch.isnan
+ 551. file:///tmp/lynxXXXXImBBjn/generated/torch.isreal.html#torch.isreal
+ 552. file:///tmp/lynxXXXXImBBjn/generated/torch.kthvalue.html#torch.kthvalue
+ 553. file:///tmp/lynxXXXXImBBjn/generated/torch.le.html#torch.le
+ 554. file:///tmp/lynxXXXXImBBjn/generated/torch.less_equal.html#torch.less_equal
+ 555. file:///tmp/lynxXXXXImBBjn/generated/torch.le.html#torch.le
+ 556. file:///tmp/lynxXXXXImBBjn/generated/torch.lt.html#torch.lt
+ 557. file:///tmp/lynxXXXXImBBjn/generated/torch.less.html#torch.less
+ 558. file:///tmp/lynxXXXXImBBjn/generated/torch.lt.html#torch.lt
+ 559. file:///tmp/lynxXXXXImBBjn/generated/torch.maximum.html#torch.maximum
+ 560. file:///tmp/lynxXXXXImBBjn/generated/torch.minimum.html#torch.minimum
+ 561. file:///tmp/lynxXXXXImBBjn/generated/torch.fmax.html#torch.fmax
+ 562. file:///tmp/lynxXXXXImBBjn/generated/torch.fmin.html#torch.fmin
+ 563. file:///tmp/lynxXXXXImBBjn/generated/torch.ne.html#torch.ne
+ 564. file:///tmp/lynxXXXXImBBjn/generated/torch.not_equal.html#torch.not_equal
+ 565. file:///tmp/lynxXXXXImBBjn/generated/torch.ne.html#torch.ne
+ 566. file:///tmp/lynxXXXXImBBjn/generated/torch.sort.html#torch.sort
+ 567. file:///tmp/lynxXXXXImBBjn/generated/torch.topk.html#torch.topk
+ 568. file:///tmp/lynxXXXXImBBjn/generated/torch.msort.html#torch.msort
+ 569. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#spectral-ops
+ 570. file:///tmp/lynxXXXXImBBjn/generated/torch.stft.html#torch.stft
+ 571. file:///tmp/lynxXXXXImBBjn/generated/torch.istft.html#torch.istft
+ 572. file:///tmp/lynxXXXXImBBjn/generated/torch.bartlett_window.html#torch.bartlett_window
+ 573. file:///tmp/lynxXXXXImBBjn/generated/torch.blackman_window.html#torch.blackman_window
+ 574. file:///tmp/lynxXXXXImBBjn/generated/torch.hamming_window.html#torch.hamming_window
+ 575. file:///tmp/lynxXXXXImBBjn/generated/torch.hann_window.html#torch.hann_window
+ 576. file:///tmp/lynxXXXXImBBjn/generated/torch.kaiser_window.html#torch.kaiser_window
+ 577. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#other-operations
+ 578. file:///tmp/lynxXXXXImBBjn/generated/torch.atleast_1d.html#torch.atleast_1d
+ 579. file:///tmp/lynxXXXXImBBjn/generated/torch.atleast_2d.html#torch.atleast_2d
+ 580. file:///tmp/lynxXXXXImBBjn/generated/torch.atleast_3d.html#torch.atleast_3d
+ 581. file:///tmp/lynxXXXXImBBjn/generated/torch.bincount.html#torch.bincount
+ 582. file:///tmp/lynxXXXXImBBjn/generated/torch.block_diag.html#torch.block_diag
+ 583. file:///tmp/lynxXXXXImBBjn/generated/torch.broadcast_tensors.html#torch.broadcast_tensors
+ 584. file:///tmp/lynxXXXXImBBjn/notes/broadcasting.html#broadcasting-semantics
+ 585. file:///tmp/lynxXXXXImBBjn/generated/torch.broadcast_to.html#torch.broadcast_to
+ 586. file:///tmp/lynxXXXXImBBjn/generated/torch.broadcast_shapes.html#torch.broadcast_shapes
+ 587. file:///tmp/lynxXXXXImBBjn/generated/torch.broadcast_tensors.html#torch.broadcast_tensors
+ 588. file:///tmp/lynxXXXXImBBjn/generated/torch.bucketize.html#torch.bucketize
+ 589. file:///tmp/lynxXXXXImBBjn/generated/torch.cartesian_prod.html#torch.cartesian_prod
+ 590. file:///tmp/lynxXXXXImBBjn/generated/torch.cdist.html#torch.cdist
+ 591. file:///tmp/lynxXXXXImBBjn/generated/torch.clone.html#torch.clone
+ 592. file:///tmp/lynxXXXXImBBjn/generated/torch.combinations.html#torch.combinations
+ 593. file:///tmp/lynxXXXXImBBjn/generated/torch.corrcoef.html#torch.corrcoef
+ 594. file:///tmp/lynxXXXXImBBjn/generated/torch.cov.html#torch.cov
+ 595. file:///tmp/lynxXXXXImBBjn/generated/torch.cross.html#torch.cross
+ 596. file:///tmp/lynxXXXXImBBjn/generated/torch.cummax.html#torch.cummax
+ 597. file:///tmp/lynxXXXXImBBjn/generated/torch.cummin.html#torch.cummin
+ 598. file:///tmp/lynxXXXXImBBjn/generated/torch.cumprod.html#torch.cumprod
+ 599. file:///tmp/lynxXXXXImBBjn/generated/torch.cumsum.html#torch.cumsum
+ 600. file:///tmp/lynxXXXXImBBjn/generated/torch.diag.html#torch.diag
+ 601. file:///tmp/lynxXXXXImBBjn/generated/torch.diag_embed.html#torch.diag_embed
+ 602. file:///tmp/lynxXXXXImBBjn/generated/torch.diagflat.html#torch.diagflat
+ 603. file:///tmp/lynxXXXXImBBjn/generated/torch.diagonal.html#torch.diagonal
+ 604. file:///tmp/lynxXXXXImBBjn/generated/torch.diff.html#torch.diff
+ 605. file:///tmp/lynxXXXXImBBjn/generated/torch.einsum.html#torch.einsum
+ 606. file:///tmp/lynxXXXXImBBjn/generated/torch.flatten.html#torch.flatten
+ 607. file:///tmp/lynxXXXXImBBjn/generated/torch.flip.html#torch.flip
+ 608. file:///tmp/lynxXXXXImBBjn/generated/torch.fliplr.html#torch.fliplr
+ 609. file:///tmp/lynxXXXXImBBjn/generated/torch.flipud.html#torch.flipud
+ 610. file:///tmp/lynxXXXXImBBjn/generated/torch.kron.html#torch.kron
+ 611. file:///tmp/lynxXXXXImBBjn/generated/torch.rot90.html#torch.rot90
+ 612. file:///tmp/lynxXXXXImBBjn/generated/torch.gcd.html#torch.gcd
+ 613. file:///tmp/lynxXXXXImBBjn/generated/torch.histc.html#torch.histc
+ 614. file:///tmp/lynxXXXXImBBjn/generated/torch.histogram.html#torch.histogram
+ 615. file:///tmp/lynxXXXXImBBjn/generated/torch.histogramdd.html#torch.histogramdd
+ 616. file:///tmp/lynxXXXXImBBjn/generated/torch.meshgrid.html#torch.meshgrid
+ 617. file:///tmp/lynxXXXXImBBjn/generated/torch.lcm.html#torch.lcm
+ 618. file:///tmp/lynxXXXXImBBjn/generated/torch.logcumsumexp.html#torch.logcumsumexp
+ 619. file:///tmp/lynxXXXXImBBjn/generated/torch.ravel.html#torch.ravel
+ 620. file:///tmp/lynxXXXXImBBjn/generated/torch.renorm.html#torch.renorm
+ 621. file:///tmp/lynxXXXXImBBjn/generated/torch.repeat_interleave.html#torch.repeat_interleave
+ 622. file:///tmp/lynxXXXXImBBjn/generated/torch.roll.html#torch.roll
+ 623. file:///tmp/lynxXXXXImBBjn/generated/torch.searchsorted.html#torch.searchsorted
+ 624. file:///tmp/lynxXXXXImBBjn/generated/torch.tensordot.html#torch.tensordot
+ 625. file:///tmp/lynxXXXXImBBjn/generated/torch.trace.html#torch.trace
+ 626. file:///tmp/lynxXXXXImBBjn/generated/torch.tril.html#torch.tril
+ 627. file:///tmp/lynxXXXXImBBjn/generated/torch.tril_indices.html#torch.tril_indices
+ 628. file:///tmp/lynxXXXXImBBjn/generated/torch.triu.html#torch.triu
+ 629. file:///tmp/lynxXXXXImBBjn/generated/torch.triu_indices.html#torch.triu_indices
+ 630. file:///tmp/lynxXXXXImBBjn/generated/torch.unflatten.html#torch.unflatten
+ 631. file:///tmp/lynxXXXXImBBjn/generated/torch.vander.html#torch.vander
+ 632. file:///tmp/lynxXXXXImBBjn/generated/torch.view_as_real.html#torch.view_as_real
+ 633. file:///tmp/lynxXXXXImBBjn/generated/torch.view_as_complex.html#torch.view_as_complex
+ 634. file:///tmp/lynxXXXXImBBjn/generated/torch.resolve_conj.html#torch.resolve_conj
+ 635. file:///tmp/lynxXXXXImBBjn/generated/torch.resolve_neg.html#torch.resolve_neg
+ 636. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#blas-and-lapack-operations
+ 637. file:///tmp/lynxXXXXImBBjn/generated/torch.addbmm.html#torch.addbmm
+ 638. file:///tmp/lynxXXXXImBBjn/generated/torch.addmm.html#torch.addmm
+ 639. file:///tmp/lynxXXXXImBBjn/generated/torch.addmv.html#torch.addmv
+ 640. file:///tmp/lynxXXXXImBBjn/generated/torch.addr.html#torch.addr
+ 641. file:///tmp/lynxXXXXImBBjn/generated/torch.baddbmm.html#torch.baddbmm
+ 642. file:///tmp/lynxXXXXImBBjn/generated/torch.bmm.html#torch.bmm
+ 643. file:///tmp/lynxXXXXImBBjn/generated/torch.chain_matmul.html#torch.chain_matmul
+ 644. file:///tmp/lynxXXXXImBBjn/generated/torch.cholesky.html#torch.cholesky
+ 645. file:///tmp/lynxXXXXImBBjn/generated/torch.cholesky_inverse.html#torch.cholesky_inverse
+ 646. file:///tmp/lynxXXXXImBBjn/generated/torch.cholesky_solve.html#torch.cholesky_solve
+ 647. file:///tmp/lynxXXXXImBBjn/generated/torch.dot.html#torch.dot
+ 648. file:///tmp/lynxXXXXImBBjn/generated/torch.geqrf.html#torch.geqrf
+ 649. file:///tmp/lynxXXXXImBBjn/generated/torch.ger.html#torch.ger
+ 650. file:///tmp/lynxXXXXImBBjn/generated/torch.outer.html#torch.outer
+ 651. file:///tmp/lynxXXXXImBBjn/generated/torch.inner.html#torch.inner
+ 652. file:///tmp/lynxXXXXImBBjn/generated/torch.inverse.html#torch.inverse
+ 653. file:///tmp/lynxXXXXImBBjn/generated/torch.linalg.inv.html#torch.linalg.inv
+ 654. file:///tmp/lynxXXXXImBBjn/generated/torch.det.html#torch.det
+ 655. file:///tmp/lynxXXXXImBBjn/generated/torch.linalg.det.html#torch.linalg.det
+ 656. file:///tmp/lynxXXXXImBBjn/generated/torch.logdet.html#torch.logdet
+ 657. file:///tmp/lynxXXXXImBBjn/generated/torch.slogdet.html#torch.slogdet
+ 658. file:///tmp/lynxXXXXImBBjn/generated/torch.linalg.slogdet.html#torch.linalg.slogdet
+ 659. file:///tmp/lynxXXXXImBBjn/generated/torch.lu.html#torch.lu
+ 660. file:///tmp/lynxXXXXImBBjn/generated/torch.lu_solve.html#torch.lu_solve
+ 661. file:///tmp/lynxXXXXImBBjn/generated/torch.linalg.lu_factor.html#torch.linalg.lu_factor
+ 662. file:///tmp/lynxXXXXImBBjn/generated/torch.lu_unpack.html#torch.lu_unpack
+ 663. file:///tmp/lynxXXXXImBBjn/generated/torch.linalg.lu_factor.html#torch.linalg.lu_factor
+ 664. file:///tmp/lynxXXXXImBBjn/generated/torch.matmul.html#torch.matmul
+ 665. file:///tmp/lynxXXXXImBBjn/generated/torch.matrix_power.html#torch.matrix_power
+ 666. file:///tmp/lynxXXXXImBBjn/generated/torch.linalg.matrix_power.html#torch.linalg.matrix_power
+ 667. file:///tmp/lynxXXXXImBBjn/generated/torch.matrix_exp.html#torch.matrix_exp
+ 668. file:///tmp/lynxXXXXImBBjn/generated/torch.linalg.matrix_exp.html#torch.linalg.matrix_exp
+ 669. file:///tmp/lynxXXXXImBBjn/generated/torch.mm.html#torch.mm
+ 670. file:///tmp/lynxXXXXImBBjn/generated/torch.mv.html#torch.mv
+ 671. file:///tmp/lynxXXXXImBBjn/generated/torch.orgqr.html#torch.orgqr
+ 672. file:///tmp/lynxXXXXImBBjn/generated/torch.linalg.householder_product.html#torch.linalg.householder_product
+ 673. file:///tmp/lynxXXXXImBBjn/generated/torch.ormqr.html#torch.ormqr
+ 674. file:///tmp/lynxXXXXImBBjn/generated/torch.outer.html#torch.outer
+ 675. file:///tmp/lynxXXXXImBBjn/generated/torch.pinverse.html#torch.pinverse
+ 676. file:///tmp/lynxXXXXImBBjn/generated/torch.linalg.pinv.html#torch.linalg.pinv
+ 677. file:///tmp/lynxXXXXImBBjn/generated/torch.qr.html#torch.qr
+ 678. file:///tmp/lynxXXXXImBBjn/generated/torch.svd.html#torch.svd
+ 679. file:///tmp/lynxXXXXImBBjn/generated/torch.svd_lowrank.html#torch.svd_lowrank
+ 680. file:///tmp/lynxXXXXImBBjn/generated/torch.pca_lowrank.html#torch.pca_lowrank
+ 681. file:///tmp/lynxXXXXImBBjn/generated/torch.lobpcg.html#torch.lobpcg
+ 682. file:///tmp/lynxXXXXImBBjn/generated/torch.trapz.html#torch.trapz
+ 683. file:///tmp/lynxXXXXImBBjn/generated/torch.trapezoid.html#torch.trapezoid
+ 684. file:///tmp/lynxXXXXImBBjn/generated/torch.trapezoid.html#torch.trapezoid
+ 685. https://en.wikipedia.org/wiki/Trapezoidal_rule
+ 686. file:///tmp/lynxXXXXImBBjn/generated/torch.cumulative_trapezoid.html#torch.cumulative_trapezoid
+ 687. https://en.wikipedia.org/wiki/Trapezoidal_rule
+ 688. file:///tmp/lynxXXXXImBBjn/generated/torch.triangular_solve.html#torch.triangular_solve
+ 689. file:///tmp/lynxXXXXImBBjn/generated/torch.vdot.html#torch.vdot
+ 690. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#foreach-operations
+ 691. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_abs.html#torch._foreach_abs
+ 692. file:///tmp/lynxXXXXImBBjn/generated/torch.abs.html#torch.abs
+ 693. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_abs_.html#torch._foreach_abs_
+ 694. file:///tmp/lynxXXXXImBBjn/generated/torch.abs.html#torch.abs
+ 695. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_acos.html#torch._foreach_acos
+ 696. file:///tmp/lynxXXXXImBBjn/generated/torch.acos.html#torch.acos
+ 697. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_acos_.html#torch._foreach_acos_
+ 698. file:///tmp/lynxXXXXImBBjn/generated/torch.acos.html#torch.acos
+ 699. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_asin.html#torch._foreach_asin
+ 700. file:///tmp/lynxXXXXImBBjn/generated/torch.asin.html#torch.asin
+ 701. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_asin_.html#torch._foreach_asin_
+ 702. file:///tmp/lynxXXXXImBBjn/generated/torch.asin.html#torch.asin
+ 703. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_atan.html#torch._foreach_atan
+ 704. file:///tmp/lynxXXXXImBBjn/generated/torch.atan.html#torch.atan
+ 705. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_atan_.html#torch._foreach_atan_
+ 706. file:///tmp/lynxXXXXImBBjn/generated/torch.atan.html#torch.atan
+ 707. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_ceil.html#torch._foreach_ceil
+ 708. file:///tmp/lynxXXXXImBBjn/generated/torch.ceil.html#torch.ceil
+ 709. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_ceil_.html#torch._foreach_ceil_
+ 710. file:///tmp/lynxXXXXImBBjn/generated/torch.ceil.html#torch.ceil
+ 711. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_cos.html#torch._foreach_cos
+ 712. file:///tmp/lynxXXXXImBBjn/generated/torch.cos.html#torch.cos
+ 713. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_cos_.html#torch._foreach_cos_
+ 714. file:///tmp/lynxXXXXImBBjn/generated/torch.cos.html#torch.cos
+ 715. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_cosh.html#torch._foreach_cosh
+ 716. file:///tmp/lynxXXXXImBBjn/generated/torch.cosh.html#torch.cosh
+ 717. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_cosh_.html#torch._foreach_cosh_
+ 718. file:///tmp/lynxXXXXImBBjn/generated/torch.cosh.html#torch.cosh
+ 719. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_erf.html#torch._foreach_erf
+ 720. file:///tmp/lynxXXXXImBBjn/generated/torch.erf.html#torch.erf
+ 721. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_erf_.html#torch._foreach_erf_
+ 722. file:///tmp/lynxXXXXImBBjn/generated/torch.erf.html#torch.erf
+ 723. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_erfc.html#torch._foreach_erfc
+ 724. file:///tmp/lynxXXXXImBBjn/generated/torch.erfc.html#torch.erfc
+ 725. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_erfc_.html#torch._foreach_erfc_
+ 726. file:///tmp/lynxXXXXImBBjn/generated/torch.erfc.html#torch.erfc
+ 727. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_exp.html#torch._foreach_exp
+ 728. file:///tmp/lynxXXXXImBBjn/generated/torch.exp.html#torch.exp
+ 729. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_exp_.html#torch._foreach_exp_
+ 730. file:///tmp/lynxXXXXImBBjn/generated/torch.exp.html#torch.exp
+ 731. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_expm1.html#torch._foreach_expm1
+ 732. file:///tmp/lynxXXXXImBBjn/generated/torch.expm1.html#torch.expm1
+ 733. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_expm1_.html#torch._foreach_expm1_
+ 734. file:///tmp/lynxXXXXImBBjn/generated/torch.expm1.html#torch.expm1
+ 735. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_floor.html#torch._foreach_floor
+ 736. file:///tmp/lynxXXXXImBBjn/generated/torch.floor.html#torch.floor
+ 737. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_floor_.html#torch._foreach_floor_
+ 738. file:///tmp/lynxXXXXImBBjn/generated/torch.floor.html#torch.floor
+ 739. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_log.html#torch._foreach_log
+ 740. file:///tmp/lynxXXXXImBBjn/generated/torch.log.html#torch.log
+ 741. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_log_.html#torch._foreach_log_
+ 742. file:///tmp/lynxXXXXImBBjn/generated/torch.log.html#torch.log
+ 743. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_log10.html#torch._foreach_log10
+ 744. file:///tmp/lynxXXXXImBBjn/generated/torch.log10.html#torch.log10
+ 745. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_log10_.html#torch._foreach_log10_
+ 746. file:///tmp/lynxXXXXImBBjn/generated/torch.log10.html#torch.log10
+ 747. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_log1p.html#torch._foreach_log1p
+ 748. file:///tmp/lynxXXXXImBBjn/generated/torch.log1p.html#torch.log1p
+ 749. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_log1p_.html#torch._foreach_log1p_
+ 750. file:///tmp/lynxXXXXImBBjn/generated/torch.log1p.html#torch.log1p
+ 751. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_log2.html#torch._foreach_log2
+ 752. file:///tmp/lynxXXXXImBBjn/generated/torch.log2.html#torch.log2
+ 753. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_log2_.html#torch._foreach_log2_
+ 754. file:///tmp/lynxXXXXImBBjn/generated/torch.log2.html#torch.log2
+ 755. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_neg.html#torch._foreach_neg
+ 756. file:///tmp/lynxXXXXImBBjn/generated/torch.neg.html#torch.neg
+ 757. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_neg_.html#torch._foreach_neg_
+ 758. file:///tmp/lynxXXXXImBBjn/generated/torch.neg.html#torch.neg
+ 759. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_tan.html#torch._foreach_tan
+ 760. file:///tmp/lynxXXXXImBBjn/generated/torch.tan.html#torch.tan
+ 761. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_tan_.html#torch._foreach_tan_
+ 762. file:///tmp/lynxXXXXImBBjn/generated/torch.tan.html#torch.tan
+ 763. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_sin.html#torch._foreach_sin
+ 764. file:///tmp/lynxXXXXImBBjn/generated/torch.sin.html#torch.sin
+ 765. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_sin_.html#torch._foreach_sin_
+ 766. file:///tmp/lynxXXXXImBBjn/generated/torch.sin.html#torch.sin
+ 767. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_sinh.html#torch._foreach_sinh
+ 768. file:///tmp/lynxXXXXImBBjn/generated/torch.sinh.html#torch.sinh
+ 769. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_sinh_.html#torch._foreach_sinh_
+ 770. file:///tmp/lynxXXXXImBBjn/generated/torch.sinh.html#torch.sinh
+ 771. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_round.html#torch._foreach_round
+ 772. file:///tmp/lynxXXXXImBBjn/generated/torch.round.html#torch.round
+ 773. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_round_.html#torch._foreach_round_
+ 774. file:///tmp/lynxXXXXImBBjn/generated/torch.round.html#torch.round
+ 775. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_sqrt.html#torch._foreach_sqrt
+ 776. file:///tmp/lynxXXXXImBBjn/generated/torch.sqrt.html#torch.sqrt
+ 777. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_sqrt_.html#torch._foreach_sqrt_
+ 778. file:///tmp/lynxXXXXImBBjn/generated/torch.sqrt.html#torch.sqrt
+ 779. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_lgamma.html#torch._foreach_lgamma
+ 780. file:///tmp/lynxXXXXImBBjn/generated/torch.lgamma.html#torch.lgamma
+ 781. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_lgamma_.html#torch._foreach_lgamma_
+ 782. file:///tmp/lynxXXXXImBBjn/generated/torch.lgamma.html#torch.lgamma
+ 783. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_frac.html#torch._foreach_frac
+ 784. file:///tmp/lynxXXXXImBBjn/generated/torch.frac.html#torch.frac
+ 785. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_frac_.html#torch._foreach_frac_
+ 786. file:///tmp/lynxXXXXImBBjn/generated/torch.frac.html#torch.frac
+ 787. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_reciprocal.html#torch._foreach_reciprocal
+ 788. file:///tmp/lynxXXXXImBBjn/generated/torch.reciprocal.html#torch.reciprocal
+ 789. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_reciprocal_.html#torch._foreach_reciprocal_
+ 790. file:///tmp/lynxXXXXImBBjn/generated/torch.reciprocal.html#torch.reciprocal
+ 791. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_sigmoid.html#torch._foreach_sigmoid
+ 792. file:///tmp/lynxXXXXImBBjn/generated/torch.sigmoid.html#torch.sigmoid
+ 793. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_sigmoid_.html#torch._foreach_sigmoid_
+ 794. file:///tmp/lynxXXXXImBBjn/generated/torch.sigmoid.html#torch.sigmoid
+ 795. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_trunc.html#torch._foreach_trunc
+ 796. file:///tmp/lynxXXXXImBBjn/generated/torch.trunc.html#torch.trunc
+ 797. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_trunc_.html#torch._foreach_trunc_
+ 798. file:///tmp/lynxXXXXImBBjn/generated/torch.trunc.html#torch.trunc
+ 799. file:///tmp/lynxXXXXImBBjn/generated/torch._foreach_zero_.html#torch._foreach_zero_
+ 800. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#utilities
+ 801. file:///tmp/lynxXXXXImBBjn/generated/torch.compiled_with_cxx11_abi.html#torch.compiled_with_cxx11_abi
+ 802. file:///tmp/lynxXXXXImBBjn/generated/torch.result_type.html#torch.result_type
+ 803. file:///tmp/lynxXXXXImBBjn/tensor_attributes.html#torch.dtype
+ 804. file:///tmp/lynxXXXXImBBjn/generated/torch.can_cast.html#torch.can_cast
+ 805. file:///tmp/lynxXXXXImBBjn/tensor_attributes.html#type-promotion-doc
+ 806. file:///tmp/lynxXXXXImBBjn/generated/torch.promote_types.html#torch.promote_types
+ 807. file:///tmp/lynxXXXXImBBjn/tensor_attributes.html#torch.dtype
+ 808. file:///tmp/lynxXXXXImBBjn/generated/torch.use_deterministic_algorithms.html#torch.use_deterministic_algorithms
+ 809. file:///tmp/lynxXXXXImBBjn/generated/torch.are_deterministic_algorithms_enabled.html#torch.are_deterministic_algorithms_enabled
+ 810. file:///tmp/lynxXXXXImBBjn/generated/torch.is_deterministic_algorithms_warn_only_enabled.html#torch.is_deterministic_algorithms_warn_only_enabled
+ 811. file:///tmp/lynxXXXXImBBjn/generated/torch.set_deterministic_debug_mode.html#torch.set_deterministic_debug_mode
+ 812. file:///tmp/lynxXXXXImBBjn/generated/torch.get_deterministic_debug_mode.html#torch.get_deterministic_debug_mode
+ 813. file:///tmp/lynxXXXXImBBjn/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+ 814. file:///tmp/lynxXXXXImBBjn/generated/torch.get_float32_matmul_precision.html#torch.get_float32_matmul_precision
+ 815. file:///tmp/lynxXXXXImBBjn/generated/torch.set_warn_always.html#torch.set_warn_always
+ 816. file:///tmp/lynxXXXXImBBjn/generated/torch.get_device_module.html#torch.get_device_module
+ 817. file:///tmp/lynxXXXXImBBjn/generated/torch.is_warn_always_enabled.html#torch.is_warn_always_enabled
+ 818. file:///tmp/lynxXXXXImBBjn/generated/torch.vmap.html#torch.vmap
+ 819. file:///tmp/lynxXXXXImBBjn/generated/torch._assert.html#torch._assert
+ 820. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#symbolic-numbers
+ 821. file:///tmp/lynxXXXXImBBjn/_modules/torch.html#SymInt
+ 822. https://github.com/pytorch/pytorch/blob/v2.6.0/torch/__init__.py#L408
+ 823. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.SymInt
+ 824. file:///tmp/lynxXXXXImBBjn/_modules/torch.html#SymInt.as_integer_ratio
+ 825. https://github.com/pytorch/pytorch/blob/v2.6.0/torch/__init__.py#L590
+ 826. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.SymInt.as_integer_ratio
+ 827. https://docs.python.org/3/library/typing.html#typing.Tuple
+ 828. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.SymInt
+ 829. https://docs.python.org/3/library/functions.html#int
+ 830. file:///tmp/lynxXXXXImBBjn/_modules/torch.html#SymFloat
+ 831. https://github.com/pytorch/pytorch/blob/v2.6.0/torch/__init__.py#L605
+ 832. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.SymFloat
+ 833. file:///tmp/lynxXXXXImBBjn/_modules/torch.html#SymFloat.as_integer_ratio
+ 834. https://github.com/pytorch/pytorch/blob/v2.6.0/torch/__init__.py#L702
+ 835. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.SymFloat.as_integer_ratio
+ 836. https://docs.python.org/3/library/typing.html#typing.Tuple
+ 837. https://docs.python.org/3/library/functions.html#int
+ 838. https://docs.python.org/3/library/functions.html#int
+ 839. file:///tmp/lynxXXXXImBBjn/_modules/torch.html#SymFloat.conjugate
+ 840. https://github.com/pytorch/pytorch/blob/v2.6.0/torch/__init__.py#L715
+ 841. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.SymFloat.conjugate
+ 842. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.SymFloat
+ 843. file:///tmp/lynxXXXXImBBjn/_modules/torch.html#SymFloat.hex
+ 844. https://github.com/pytorch/pytorch/blob/v2.6.0/torch/__init__.py#L719
+ 845. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.SymFloat.hex
+ 846. https://docs.python.org/3/library/stdtypes.html#str
+ 847. file:///tmp/lynxXXXXImBBjn/_modules/torch.html#SymFloat.is_integer
+ 848. https://github.com/pytorch/pytorch/blob/v2.6.0/torch/__init__.py#L698
+ 849. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.SymFloat.is_integer
+ 850. file:///tmp/lynxXXXXImBBjn/_modules/torch.html#SymBool
+ 851. https://github.com/pytorch/pytorch/blob/v2.6.0/torch/__init__.py#L724
+ 852. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.SymBool
+ 853. file:///tmp/lynxXXXXImBBjn/generated/torch.sym_float.html#torch.sym_float
+ 854. file:///tmp/lynxXXXXImBBjn/generated/torch.sym_fresh_size.html#torch.sym_fresh_size
+ 855. file:///tmp/lynxXXXXImBBjn/generated/torch.sym_int.html#torch.sym_int
+ 856. file:///tmp/lynxXXXXImBBjn/generated/torch.sym_max.html#torch.sym_max
+ 857. file:///tmp/lynxXXXXImBBjn/generated/torch.sym_min.html#torch.sym_min
+ 858. file:///tmp/lynxXXXXImBBjn/generated/torch.sym_not.html#torch.sym_not
+ 859. file:///tmp/lynxXXXXImBBjn/generated/torch.sym_ite.html#torch.sym_ite
+ 860. file:///tmp/lynxXXXXImBBjn/generated/torch.sym_sum.html#torch.sym_sum
+ 861. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#export-path
+ 862. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#control-flow
+ 863. file:///tmp/lynxXXXXImBBjn/generated/torch.cond.html#torch.cond
+ 864. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#optimizations
+ 865. file:///tmp/lynxXXXXImBBjn/generated/torch.compile.html#torch.compile
+ 866. https://pytorch.org/docs/main/torch.compiler.html
+ 867. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#operator-tags
+ 868. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.Tag
+ 869. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.Tag.name
+ 870. file:///tmp/lynxXXXXImBBjn/generated/torch.is_tensor.html
+ 871. file:///tmp/lynxXXXXImBBjn/deploy.html
+ 872. http://sphinx-doc.org/
+ 873. https://github.com/rtfd/sphinx_rtd_theme
+ 874. https://readthedocs.org/
+ 875. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html
+ 876. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#tensors
+ 877. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#creation-ops
+ 878. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#indexing-slicing-joining-mutating-ops
+ 879. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#accelerators
+ 880. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#generators
+ 881. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#random-sampling
+ 882. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.torch.default_generator
+ 883. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#in-place-random-sampling
+ 884. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#quasi-random-sampling
+ 885. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#serialization
+ 886. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#parallelism
+ 887. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#locally-disabling-gradient-computation
+ 888. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#math-operations
+ 889. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#constants
+ 890. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#pointwise-ops
+ 891. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#reduction-ops
+ 892. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#comparison-ops
+ 893. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#spectral-ops
+ 894. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#other-operations
+ 895. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#blas-and-lapack-operations
+ 896. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#foreach-operations
+ 897. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#utilities
+ 898. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#symbolic-numbers
+ 899. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.SymInt
+ 900. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.SymInt.as_integer_ratio
+ 901. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.SymFloat
+ 902. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.SymFloat.as_integer_ratio
+ 903. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.SymFloat.conjugate
+ 904. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.SymFloat.hex
+ 905. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.SymFloat.is_integer
+ 906. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.SymBool
+ 907. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#export-path
+ 908. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#control-flow
+ 909. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#optimizations
+ 910. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#operator-tags
+ 911. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.Tag
+ 912. file:///tmp/lynxXXXXImBBjn/L31050-7631TMP.html#torch.Tag.name
+ 913. https://pytorch.org/docs/stable/index.html
+ 914. https://pytorch.org/tutorials
+ 915. https://pytorch.org/resources
+ 916. https://pytorch.org/
+ 917. https://pytorch.org/get-started
+ 918. https://pytorch.org/features
+ 919. https://pytorch.org/ecosystem
+ 920. https://pytorch.org/blog/
+ 921. https://github.com/pytorch/pytorch/blob/master/CONTRIBUTING.md
+ 922. https://pytorch.org/resources
+ 923. https://pytorch.org/tutorials
+ 924. https://pytorch.org/docs/stable/index.html
+ 925. https://discuss.pytorch.org/
+ 926. https://github.com/pytorch/pytorch/issues
+ 927. https://pytorch.org/assets/brand-guidelines/PyTorch-Brand-Guidelines.pdf
+ 928. https://www.facebook.com/pytorch
+ 929. https://twitter.com/pytorch
+ 930. https://www.youtube.com/pytorch
+ 931. https://www.linkedin.com/company/pytorch
+ 932. https://open.spotify.com/show/6UzHKeiy368jKfQMKKvJY5
+ 933. https://podcasts.apple.com/us/podcast/pytorch-developer-podcast/id1566080008
+ 934. https://www.google.com/podcasts?feed=aHR0cHM6Ly9mZWVkcy5zaW1wbGVjYXN0LmNvbS9PQjVGa0lsOA==
+ 935. https://music.amazon.com/podcasts/7a4e6f0e-26c2-49e9-a478-41bd244197d0/PyTorch-Developer-Podcast?
+ 936. https://www.linuxfoundation.org/terms/
+ 937. https://www.linuxfoundation.org/privacy-policy/
+ 938. https://www.linuxfoundation.org/policies/
+ 939. https://www.lfprojects.org/policies/
+ 940. https://www.facebook.com/policies/cookies/
+ 941. https://pytorch.org/get-started
+ 942. https://pytorch.org/tutorials
+ 943. https://pytorch.org/tutorials/beginner/basics/intro.html
+ 944. https://pytorch.org/tutorials/recipes/recipes_index.html
+ 945. https://pytorch.org/tutorials/beginner/introyt.html
+ 946. https://pytorch.org/ecosystem
+ 947. https://pytorch.org/#community-module
+ 948. https://discuss.pytorch.org/
+ 949. https://pytorch.org/resources
+ 950. https://pytorch.org/ecosystem/contributor-awards-2023
+ 951. https://pytorch.org/edge
+ 952. https://pytorch.org/executorch-overview
+ 953. https://pytorch.org/docs/stable/index.html
+ 954. https://pytorch.org/pytorch-domains
+ 955. https://pytorch.org/blog/
+ 956. https://pytorch.org/community-blog
+ 957. https://pytorch.org/videos
+ 958. https://pytorch.org/community-stories
+ 959. https://pytorch.org/events
+ 960. https://pytorch.org/foundation
+ 961. https://pytorch.org/governing-board
+
+   Hidden links:
+ 963. https://pytorch.org/
+ 964. https://github.com/pytorch/pytorch
+ 965. file://localhost/tmp/lynxXXXXImBBjn/L31050-7631TMP.html
+ 966. file://localhost/tmp/lynxXXXXImBBjn/L31050-7631TMP.html
+ 967. https://pytorch.org/
+ 968. https://pytorch.org/
+ 969. file://localhost/tmp/lynxXXXXImBBjn/L31050-7631TMP.html
